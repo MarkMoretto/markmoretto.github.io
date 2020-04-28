@@ -24,6 +24,11 @@ group :jekyll_plugins do
     # gem "jekyll-data"
 
 
+    
+    # From github vulnerability alert.
+    gem "activesupport", ">= 4.1.11"
+
+
     ### From the following:
     ### https://github.com/timlockridge/timlockridgedotcom/blob/master/Gemfile
     # gem "jekyll-paginate"
