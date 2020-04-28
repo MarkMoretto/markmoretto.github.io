@@ -19,6 +19,9 @@ group :jekyll_plugins do
     ### For GitHub
     gem 'github-pages'
 
+    gem 'redcarpet', '~> 2.3'
+    gem 'albino', '~> 1.3'
+    
     ### Read data files within jekyll theme-gems and adds the resulting hash to the site's internal data hash
     ### https://github.com/ashmaroli/jekyll-data
     # gem "jekyll-data"

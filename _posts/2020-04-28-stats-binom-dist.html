@@ -1,0 +1,108 @@
+---
+title: Binomial Distribution Demo
+layout: posts
+author: Mark M.
+---
+
+<div style="text-align: center;">
+    <h1 style="font-size: 42px;font-family: 'Trebuchet MS';color: #000045;">Stats Demo</h1>
+    <h3 style="font-size: 28px;color: #7bb2bf;font-family: monospace;">Probability Distribution for Binomial Random Variable</h3>
+</div>
+
+<section style="text-align: center;font-size:16px;color: #000045;font-weight:normal;margin-bottom:10px;">
+    Inspiration drawn from the following site:
+    <br />
+    <br />
+    <a
+       style="color:#6e997c;text-decoration: none;font-size:14px;"
+       href="https://saylordotorg.github.io/text_introductory-statistics/s08-03-the-binomial-distribution.html"
+       target="_blank"
+       >https://saylordotorg.github.io/text_introductory-statistics/s08-03-the-binomial-distribution.html
+    </a>
+</section>
+
+
+```python
+import scipy.special as ssp
+import matplotlib.pyplot as plt
+plt.rcParams["figure.figsize"] = 9,7
+```
+
+
+```python
+n = 5 # Number of trials
+p = 0.17 # Probability of "success"
+q = 1 - p # Probability of failure.
+
+dists = {}
+tot = 0
+for i in range(0, n+1):
+    res = ssp.binom(n, n-i) * (p**i) * (q ** (n - i))
+    dists[i] = round(res, 4)
+    tot += res
+tot = round(tot, 4)
+
+# Calculate mean based on total product of each key-value pair
+dist_mean_calc = sum(map(lambda x: x[0] * x[1], dists.items()))
+
+# Use formula to find mean and standard deviation
+dist_mean_simple = n * p
+dist_stdev = (n * p * q) ** (1/2)
+
+```
+
+
+```python
+# The calculated distributions are:
+print(f"Index\tValue")
+print("\n".join([f"{k}\t{v}" for k, v in dists.items()]))
+```
+
+    Index	Value
+    
+    0	0.3939
+    1	0.4034
+    2	0.1652
+    3	0.0338
+    4	0.0035
+    5	0.0001
+    
+
+
+```python
+output = []
+output.append(f"The calculated distribution mean is: {dist_mean_calc:.4f}")
+output.append(f"The formula-based distribution mean is equivalent at: {dist_mean_simple:.4f}")
+output.append(f"The distribution standard deviation is: {dist_stdev:.4f}")
+
+print("\n".join(output))
+```
+
+    The calculated distribution mean is: 0.8497
+    The formula-based distribution mean is equivalent at: 0.8500
+    The distribution standard deviation is: 0.8399
+    
+
+
+```python
+labels = list(map(str, dists.keys()))
+values = list(dists.values())
+x = [i for i in range(len(labels))]
+```
+
+
+```python
+fig, ax = plt.subplots()
+plt.bar(x, values)
+ax.set_ylabel("Bin")
+ax.set_title(f"Probability Distribution for p = {p}")
+ax.set_xticks(x)
+ax.set_xticklabels(labels)
+
+fig.tight_layout()
+plt.show()
+```
+
+
+![png](/assets/images/notebooks/output_7_0.png)
+
