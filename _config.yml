@@ -1,0 +1,69 @@
+# General info
+title: "Mark Moretto's Blog"
+url: https://markmoretto.github.io
+baseurl: /
+
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  # syntax_highlighter_opts:
+  #   block:
+  #     line_numbers: true
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+
+# Author info
+author:
+  name: "Mark Moretto"
+
+
+# GitHub repo for this site
+github:
+  repo: https://github.com/markmoretto/markmoretto.github.io
+
+
+# Outputting
+# permalink: /:categories/:title/
+# paginate: 5 # amount of posts to show
+# paginate_path: /page:num/
+#timezone: America/Detroit # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+#timezone: America/New_York # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+
+
+# Plugins (Formerly known as 'gems' -> https://github.com/elixir-lang/elixir-lang.github.com/issues/1035)
+plugins:
+  # - jekyll-paginate
+  - jekyll-gist
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+  # - jekyll-default-layout
+  # - jekyll-github-metadata
+  # - jekyll-include-cache
+
+
+# defaults:
+#   - scope:
+#       path: ""
+#   - values:
+#       layout: "default"
