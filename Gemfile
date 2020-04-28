@@ -19,8 +19,10 @@ group :jekyll_plugins do
     ### For GitHub
     gem 'github-pages'
 
+    # Markdown Syntax code highlighting
     gem 'redcarpet', '~> 2.3'
     gem 'albino', '~> 1.3'
+    gem 'pygments.rb', '~> 1.2', '>= 1.2.1'
     
     ### Read data files within jekyll theme-gems and adds the resulting hash to the site's internal data hash
     ### https://github.com/ashmaroli/jekyll-data

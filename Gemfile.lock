@@ -205,6 +205,7 @@ GEM
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
     minitest (5.14.0)
+    multi_json (1.14.1)
     multipart-post (2.1.1)
     nokogiri (1.10.9-x64-mingw32)
       mini_portile2 (~> 2.4.0)
@@ -215,6 +216,8 @@ GEM
       forwardable-extended (~> 2.6)
     posix-spawn (0.3.13)
     public_suffix (3.1.1)
+    pygments.rb (1.2.1)
+      multi_json (>= 1.0.0)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -254,6 +257,7 @@ DEPENDENCIES
   github-pages
   jekyll-seo-tag
   nokogiri (>= 1.10.8)
+  pygments.rb (~> 1.2, >= 1.2.1)
   redcarpet (~> 2.3)
   tzinfo-data
   wdm (>= 0.1.0)

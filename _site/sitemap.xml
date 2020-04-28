@@ -18,6 +18,9 @@
 <loc>http://localhost:4000/design/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/notebooks/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/about/</loc>
 </url>
 </urlset>

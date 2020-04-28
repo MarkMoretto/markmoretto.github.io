@@ -5,14 +5,14 @@ baseurl: /
 
 
 # Conversion
-# markdown: kramdown
-# highlighter: rouge
-# lsi: false
-# excerpt_separator: "\n\n"
-# incremental: false
-markdown: redcarpet2
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+# markdown: redcarpet2
+# redcarpet:
+#   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
   
 
 # Markdown Processing
@@ -83,6 +83,6 @@ plugins:
 #       layout: "default"
 
 # UnComment once you have pygments installed. Used for code syntax highlighting.
-#pygments: true
+highlighter: pygments
 
 exclude: [Rakefile]
