@@ -83,6 +83,6 @@ plugins:
 #       layout: "default"
 
 # UnComment once you have pygments installed. Used for code syntax highlighting.
-highlighter: pygments
+highlighter: rouge
 
 exclude: [Rakefile]
