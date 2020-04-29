@@ -4,7 +4,7 @@ layout: default
 
 <section class="center mw7">
   <article>
-    {% for post in site.posts limit: 1 %}
+    {% for post in site.posts limit: 3 %}
        <h1>{{ post.title }}</h1>
       {{ post.content }}
     {% endfor %}
