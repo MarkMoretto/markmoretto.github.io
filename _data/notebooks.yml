@@ -1,0 +1,6 @@
+examples:
+  - idx: 0
+    group: Coursera - IBM AI and Deep Learning
+    notebooks:
+      - name: Feed-Forward NN Using Keras
+        link: /assets/notebooks/wk-2-keras-sampler.html

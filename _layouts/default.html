@@ -4,16 +4,28 @@
         {% include _meta.html %}
 
         <title>{{ page.title }}</title>
-        
-        <link rel="stylesheet" href="/assets/css/main.css">
 
+
+        <style>
+            .flex-wrapper {
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+                justify-content: space-between;
+              }            
+        </style>
+
+        <link rel="stylesheet" href="/assets/css/main.css">
+        
         {% include _scripts.html %}
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this website.</noscript>
-        {% include _navigation.html %}
-        {{ content }}
-        {% include _footer.html %}
-        {% include _google_analytics.html %}
+        <div class="flex-wrapper">
+            {% include _navigation.html %}
+            {{ content }}
+            {% include _footer.html %}
+            {% include _google_analytics.html %}
+        </div>
     </body>
 </html>

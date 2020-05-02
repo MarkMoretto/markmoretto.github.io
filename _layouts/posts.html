@@ -5,26 +5,37 @@
 
         <title>{{ page.title }}</title>
         
+        <style>
+            .flex-wrapper {
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+                justify-content: space-between
+              }            
+        </style>
+            
         <link rel="stylesheet" href="/assets/css/main.css">
 
         {% include _scripts.html %}
     </head>
     <body>
-        {% include _navigation.html %}
-        <article>
-            <!-- This is where the title: in your front matter gets dropped in.-->
-            <h1>
-            {{ page.title }}
-            </h1>
-            {% if page.author %}
-            <p>by: {{ page.author }}</p>
-            {% endif %}
-            <!-- This is where post content lives -->
-            {{ content }}
-            <!-- end of post content -->
-        </article>
-        {% include _related_posts.html %}
-        {% include _footer.html %}
-        {% include _google_analytics.html %}
+        <div class="flex-wrapper"> 
+            {% include _navigation.html %}
+            <article>
+                <!-- This is where the title: in your front matter gets dropped in.-->
+                <h1>
+                {{ page.title }}
+                </h1>
+                {% if page.author %}
+                <p>by: {{ page.author }}</p>
+                {% endif %}
+                <!-- This is where post content lives -->
+                {{ content }}
+                <!-- end of post content -->
+            </article>
+            {% include _related_posts.html %}
+            {% include _footer.html %}
+            {% include _google_analytics.html %}
+        </div> 
     </body>
 </html>

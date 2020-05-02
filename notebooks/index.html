@@ -1,6 +1,18 @@
 ---
 layout: default
-title: Jupyter Notebook example
+title: Jupyter Notebook examples
 ---
+            
+{% assign nbsort = site.data.notebooks.examples | sort_natural: 'group'  %}
+{% assign nblist = nbsort | sort_natural: 'nb_name'  %}
 
-
+<section class="w6 mw8 fl-ns pa3 ph5-ns">
+{% for item in nblist %}
+    <h2 >{{ item.group }}</h2>
+    <ul>
+    {% for nb in item.notebooks %}
+        <li><a class="f4 fw6 db black link hover-dark-pink" href="{{ nb.link }}" target="_blank">{{ nb.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% endfor %}
+</section>
