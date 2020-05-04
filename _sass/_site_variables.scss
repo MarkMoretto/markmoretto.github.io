@@ -17,9 +17,23 @@
     flex:  $values;
   }
 
-.flex-wrapper {
+.flex-fill {
     @include flexbox();
     min-height: 100vh;
     flex-direction: column;
     justify-content: space-between;
   }
+
+
+// Old: <div class="flex flex-column justify-between-l min-vh-100">
+.flex-auto-core {
+  flex: 1 1 auto;
+  min-width: 1; /* 0 */
+  min-height: 1; /* 0 */
+}  
+
+
+/* Footer alignment */
+.footer {
+  flex-shrink: 0;
+}

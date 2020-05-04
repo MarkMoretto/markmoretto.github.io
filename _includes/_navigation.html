@@ -1,8 +1,15 @@
 <nav class="pa3 pa4-ns" role="navigation">
-    <a class="link dim black b f1 f-headline-ns tc db mb3 mb4-ns" href="/" title="Home">Mark's Website</a>
-    <div class="tc pb3">
+    <a class="link dim black b f1 lh-title tc db mb1 mb2-ns" href="/" title="Home">{{ site.title }}</a>
+    <a class="black b f5 lh-copy tc db mb2 mb3-ns" title="Tagline">{{ site.tagline }}</a>
+    <div class="tc pb1">
         {% for item in site.data.navigation %}
-        <a href="{{ item.link }}" {% if page.url == item.link %}class="link dim gray f6 f5-ns dib mr3 current"{% else %}class="link dim gray f6 f5-ns dib mr3"{% endif %} title="{{ item.name }}">
+        <a href="{{ item.link }}" 
+            {% if page.url == item.link %}
+                class="link dim gray f6 f5-ns dib mr3 current"
+            {% else %}
+                class="link dim gray f6 f5-ns dib mr3"
+            {% endif %} 
+        title="{{ item.name }}">
         {{ item.name }}
         </a>
         {% endfor %}

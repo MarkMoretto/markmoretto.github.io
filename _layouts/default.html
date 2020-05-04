@@ -1,20 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-
-        {% include _meta.html %}
-    
-        <title>{{ page.title }}</title>
-
-    
-        <link rel="stylesheet" href="/assets/css/main.css">
-        
-        {% include _scripts.html %}
+        {% include _head.html %}
     </head>
-
     <body>
-        <noscript>You need to enable JavaScript to run this website.</noscript>
-        <div class="flex-wrapper">
+        <noscript>Please enable JavaScript to view this website.</noscript>
+        <div class="flex flex-column justify-between-l min-vh-100">
             {% include _navigation.html %}
             {{ content }}
             {% include _footer.html %}
