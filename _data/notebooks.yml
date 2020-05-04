@@ -4,3 +4,8 @@ examples:
     notebooks:
       - name: Feed-Forward NN Using Keras
         link: /assets/notebooks/wk-2-keras-sampler.html
+  - idx: 1
+    group: General
+    notebooks:
+      - name: Cheryl's Birthday Logic
+        link: /assets/notebooks/cheryls-birthday-solution.md

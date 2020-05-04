@@ -5,4 +5,6 @@
 _site
 *.bat
 
-notebook-ideas.md
+
+# Local files; Prepend with "loc-"
+loc-*.md

@@ -1,11 +1,6 @@
-// document.addEventListener("DOMContentLoaded", function(event) {
 
-// });
+// HTML on page: <span class="color-picker"></span>
 
-
-/*
-Color picker. Goes with _dropdown.scss
-*/
 var colors = ['1abc9c', '2c3e50', '2980b9', '7f8c8d', 'f1c40f', 'd35400', '27ae60'];
 
 colors.each(function (color) {
@@ -20,3 +15,8 @@ $$('.color-picker')[0].on('click', '.square', function(event, square) {
     dropdown.setStyle({'background' : background});
   });
 });
+
+/*
+ * Original version at
+ * http://red-team-design.com/making-html-dropdowns-not-suck
+ */ 

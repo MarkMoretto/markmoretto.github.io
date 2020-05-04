@@ -1,0 +1,25 @@
+
+
+// Adding a flex-grid to handle keeping the footer at the bottom of the page
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  @mixin flex($values) {
+    -webkit-box-flex: $values;
+    -moz-box-flex:  $values;
+    -webkit-flex:  $values;
+    -ms-flex:  $values;
+    flex:  $values;
+  }
+
+.flex-wrapper {
+    @include flexbox();
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+  }
