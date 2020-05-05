@@ -5,11 +5,14 @@
     </head>
     <body>
         <noscript>Please enable JavaScript to view this website.</noscript>
-        <div class="flex flex-column justify-between-l min-vh-100">
-            {% include _navigation.html %}
+        <div class="container">
+            {% include _navigation.html %}    
             {{ content }}
+        </div>
+
+        <div class="footer">
             {% include _footer.html %}
-            {% include _google_analytics.html %}
+            {% include _google_analytics.html %}              
         </div>
     </body>
 </html>

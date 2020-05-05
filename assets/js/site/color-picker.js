@@ -9,7 +9,8 @@ colors.each(function (color) {
   );
 });
 
-$$('.color-picker')[0].on('click', '.square', function(event, square) {
+
+$$('.color-picker')[0].on('click', '.color-square', function(event, square) {
   background = square.getStyle('background');
   $$('.custom-dropdown select').each(function (dropdown) {
     dropdown.setStyle({'background' : background});

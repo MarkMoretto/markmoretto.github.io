@@ -1,32 +1,15 @@
 ---
-layout: default
+title: Home
 ---
 
-{{ site.title }}
-
-<section class="center mw7">
-  <h2 class="athelas ph3 ph0-l">Recent Posts:</h2>
+<section class="mw8 center">
+  <h2 class="avenir ph1 ph0-l">Recent Posts:</h2>
   <article>
-    {% for post in site.posts limit: 1 %}
-       <h1>{{ post.title }}</h1>
-      {{ post.content }}
+    {% for post in site.posts %}
+    <div class="mb3">
+      <a class="f3 fw6 db black link hover-light-purple" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        {{ post.content | strip_html | truncatewords: 40 }}
+    </div>
     {% endfor %}
   </article>
-  <section>
-    <article>
-      <ul>
-        {% for post in paginator.posts %}
-          <li>
-            <a href="{{ post.url }}" title="{{post.title}}">
-              <date datetime="{{post.date}}">
-                {{ post.date | date_to_long_string }}
-              </date>
-              {{ post.title }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-      <p>...</a></p>
-    </article>
-  </section>
 </section>

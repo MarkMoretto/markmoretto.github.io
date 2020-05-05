@@ -1,39 +1,167 @@
+// Misc SCSS overrides
+// Some inspo from: https://github.com/nandomoreirame/simplest
+
+@import 'theme_colors';
+@import 'tachyons/variables';
+
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: .52em;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Footer handler
+$footer-margin: 100px;
 
 
 // Adding a flex-grid to handle keeping the footer at the bottom of the page
 @mixin flexbox() {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-  }
-  
-  @mixin flex($values) {
-    -webkit-box-flex: $values;
-    -moz-box-flex:  $values;
-    -webkit-flex:  $values;
-    -ms-flex:  $values;
-    flex:  $values;
-  }
-
-.flex-fill {
-    @include flexbox();
-    min-height: 100vh;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
 
 
-// Old: <div class="flex flex-column justify-between-l min-vh-100">
-.flex-auto-core {
-  flex: 1 1 auto;
-  min-width: 1; /* 0 */
-  min-height: 1; /* 0 */
-}  
+
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+// min-height: calc(100vh - $footer-margin:); 
+html {
+  position: relative;
+  min-height: calc(100vh - $footer-margin); 
+}
+
+body {
+  background-color: $color-primary-4;
+  display: table;
+  width: 100%;   
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+// <div class="flex flex-column justify-between-l min-vh-100">
+// Keep things in place
+.container {
+  margin-bottom: $footer-margin;
+}
 
 
 /* Footer alignment */
 .footer {
-  flex-shrink: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $footer-margin;
+  
+}
+
+
+// Misc alignment
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+
+
+// Dropdowns
+// https://codepen.io/silverdrop/pen/msrcE
+
+.color-square {
+  width: .7em;
+  height: .7em;
+  margin: .5em;
+  display: inline-block;
+}
+
+
+/* Custom dropdown */
+.custom-dropdown {
+position: relative;
+display: inline-block;
+vertical-align: middle;
+margin: 10px; /* demo only */
+
+select {
+  background-color: $color-complement-0;
+  color: $black-90;
+  font-size: inherit;
+  padding: .5em;
+  padding-right: 2.5em;	
+  border: 0;
+  margin: 0;
+  border-radius: 3px;
+  text-indent: 0.01px;
+  text-overflow: '';
+  -webkit-appearance: button; /* hide default arrow in chrome OSX */
+}
+
+.dd-big {
+  font-size: 1.2em;
+}
+
+.dd-small {
+  font-size: .7em;
+}
+
+&:before,
+&:after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+&:after {
+  color: rgba(0,0,0,.4);
+  content: "\25BC";
+  height: 1em;
+  font-size: .625em;
+  line-height: 1;
+  right: 1.2em;
+  top: 50%;
+  margin-top: -.5em;
+}
+
+&:before {
+  background-color: rgba(0,0,0,.15);
+  width: 2em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+select[disabled] {
+  color: rgba(0,0,0,.3);
+
+  &:after {
+    color: rgba(0,0,0,.1);
+  }   
+
+} 
+
 }

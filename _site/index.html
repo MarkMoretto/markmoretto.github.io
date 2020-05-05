@@ -9,6 +9,8 @@
 
 <title>
     
+    Home - 
+    
     Moretto Analytics
 </title>
 
@@ -23,15 +25,15 @@
     </head>
     <body>
         <noscript>Please enable JavaScript to view this website.</noscript>
-        <div class="flex flex-column justify-between-l min-vh-100">
+        <div class="container">
             <nav class="pa3 pa4-ns" role="navigation">
     <a class="link dim black b f1 lh-title tc db mb1 mb2-ns" href="/" title="Home">Moretto Analytics</a>
-    <a class="black b f5 lh-copy tc db mb2 mb3-ns" title="Tagline">Real Data. Real Insights.</a>
+    <a class="black b f5 lh-copy tc db mb2 mb3-ns" title="Tagline">When You're Here, You're Data!</a>
     <div class="tc pb1">
         
         <a href="/" 
             
-                class="link dim gray f6 f5-ns dib mr3 current"
+                class="link dim color-secondary-alt-1-2 f6 f5-ns dib mr3 current"
              
         title="Home">
         Home
@@ -39,7 +41,7 @@
         
         <a href="/about/index.html" 
             
-                class="link dim gray f6 f5-ns dib mr3"
+                class="link dim color-secondary-alt-1-2 f6 f5-ns dib mr3"
              
         title="About">
         About
@@ -47,7 +49,7 @@
         
         <a href="/notebooks/index.html" 
             
-                class="link dim gray f6 f5-ns dib mr3"
+                class="link dim color-secondary-alt-1-2 f6 f5-ns dib mr3"
              
         title="Notebooks">
         Notebooks
@@ -55,40 +57,40 @@
         
         <a href="/archives/index.html" 
             
-                class="link dim gray f6 f5-ns dib mr3"
+                class="link dim color-secondary-alt-1-2 f6 f5-ns dib mr3"
              
         title="Archive">
         Archive
         </a>
         
     </div>
-</nav>
-            Moretto Analytics
-
-<section class="center mw7">
-  <h2 class="athelas ph3 ph0-l">Recent Posts:</h2>
+</nav>    
+            <section class="mw8 center">
+  <h2 class="avenir ph1 ph0-l">Recent Posts:</h2>
   <article>
     
-       <h1>Test post</h1>
-      <p>A generic caption.</p>
+    <div class="mb3">
+      <a class="f3 fw6 db black link hover-light-purple" href="/2020/04/28/test-post/" title="Test post">Test post</a>
+        A generic caption.
+    </div>
+    
+    <div class="mb3">
+      <a class="f3 fw6 db black link hover-light-purple" href="/blog/machine%20learning/2020/04/28/stats-binom-dist/" title="Feed-Foward NN Sample">Feed-Foward NN Sample</a>
+        
+    </div>
     
   </article>
-  <section>
-    <article>
-      <ul>
-        
-      </ul>
-      <p>...</a></p>
-    </article>
-  </section>
 </section>
+        </div>
+
+        <div class="footer">
             <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function(event) {
         document.getElementById("footer-year").innerHTML = new Date().getFullYear();
     });
 </script>
 
-<footer class="footer pv4 ph3 tc">
+<footer class="footer cf tc">
     <a class="link hover-silver near-black dib h2 w2 mr3" href="https://www.linkedin.com/in/mark-m-8698369" target="_blank" title="LinkedIn">
         <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51V7.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z" fill-rule="nonzero"/></svg>
     </a>    
@@ -98,8 +100,13 @@
     <a class="link hover-silver near-black dib h2 w2 mr3" href="https://stackoverflow.com/users/2847946/mark-moretto" target="_blank" title="Stack Overflow">
         <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M12.658 14.577v-4.27h1.423V16H1.23v-5.693H2.65v4.27h10.006zm-8.583-1.423h7.16V11.73h-7.16v1.424zm.173-3.235l6.987 1.465.3-1.38L4.55 8.54l-.302 1.38zm.906-3.365l6.47 3.02.602-1.295-6.47-3.02-.602 1.295zm1.81-3.19l5.478 4.57.906-1.078-5.477-4.57-.905 1.077zM10.502 0L9.338.863l4.27 5.735 1.164-.862L10.5 0z"/></svg>
     </a>
-    <div class="mt4">    
+
+    <div class="f2 mt3">    
         <small class="f6 db tc">&copy; 2019 - <span id="footer-year"></span></small>
+    </div>
+
+    <div class="f3 mt2">
+        <small>Powered by: <a class="navy link hover-dark-pink" href="http://tachyons.io" target="_blank">tachyons.io</a></small>
     </div>
 </footer>
   
@@ -126,7 +133,7 @@
 
   gtag('config', 'UA-164816712-1');
 </script> -->
-
+              
         </div>
     </body>
 </html>
