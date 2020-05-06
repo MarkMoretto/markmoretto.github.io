@@ -1,6 +1,12 @@
 
 @charset "utf-8";
 
-@import 'site_variables';
-@import 'tachyons';
+// @import 'site_variables';
+// @import 'tachyons';
+
+@import 'uikit/variables-theme';
+@import 'uikit/mixins-theme';
+
 @import 'syntax-highlighting/python-monokai';
+
+@import 'uikit/uikit-theme';
