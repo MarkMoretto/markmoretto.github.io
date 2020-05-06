@@ -4,20 +4,20 @@ resumelink: https://app.box.com/s/upblb5h43y4uf978mdok45ss7jp4efm5
 ---
 
 
+<section class="mw8 center">
+    <p >Social media links (also at bottom of page):</p>
 
-  <p >Social media links (also at bottom of page):</p>
-  <div class="pa4">
-        {% for item in site.data.social %}
+    {% for item in site.data.social %}
         {% assign mod_res = item.idx | modulo: 2 %}
         <a href="{{ item.link }}" 
-          {% if mod_res == 0 %}
-          class="f4 fw6 db black link hover-hot-pink"
-          {% else %}
-          class="f4 fw6 db black link hover-light-purple"
-          {% endif %} title="{{ item.name }}">
-          {{ item.name }} - {{ mod_res }}
+        {% if mod_res == 0 %}
+        class="f4 fw6 db black link hover-hot-pink"
+        {% else %}
+        class="f4 fw6 db black link hover-light-purple"
+        {% endif %} title="{{ item.name }}">
+        {{ item.name }} - {{ mod_res }}
         </a>
-        {% endfor %}
-  </div>
+    {% endfor %}
 
+</section>
 

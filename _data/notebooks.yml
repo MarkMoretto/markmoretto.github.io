@@ -9,3 +9,8 @@ examples:
     notebooks:
       - name: Cheryl's Birthday Logic
         link: /assets/notebooks/cheryls-birthday-solution.md
+  - idx: 2
+    group: Interactive
+    notebooks:
+      - name: Interactive Network Graphs
+        link: /assets/notebooks/interactive-graph-sampler.html   

@@ -4,7 +4,7 @@
         {% include _head.html %}
     </head>
     <body>
-        <div class="flex-wrapper"> 
+        <div class="container">
             {% include _navigation.html %}
             <article>
                 <!-- This is where the title: in your front matter gets dropped in.-->
@@ -19,8 +19,11 @@
                 <!-- end of post content -->
             </article>
             {% include _related_posts.html %}
+        </div>
+
+        <div class="footer">
             {% include _footer.html %}
-            {% include _google_analytics.html %}
-        </div> 
+            {% include _google_analytics.html %}              
+        </div>
     </body>
 </html>
