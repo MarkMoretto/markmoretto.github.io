@@ -4,24 +4,23 @@
         {% include _head.html %}
     </head>
     <body>
-        <div class="container">
-            {% include _navigation.html %}
-            <article>
-                <!-- This is where the title: in your front matter gets dropped in.-->
-                <h1>
-                {{ page.title }}
-                </h1>
-                {% if page.author %}
-                <p>by: {{ page.author }}</p>
-                {% endif %}
-                <!-- This is where post content lives -->
-                {{ content }}
-                <!-- end of post content -->
-            </article>
-            {% include _related_posts.html %}
-        </div>
-
-        <div class="footer">
+        <div class="app-layout">
+            <header>
+                {% include _navigation.html %}    
+            </header>
+            <main>
+                <article>
+                    <!-- This is where the title: in your front matter gets dropped in.-->
+                    <h1>{{ page.title }}</h1>
+                    {% if page.author %}
+                        <p>by: {{ page.author }}</p>
+                    {% endif %}
+                    <!-- This is where post content lives -->
+                    {{ content }}
+                    <!-- end of post content -->
+                </article>
+                {% include _related_posts.html %}
+            </main>
             {% include _footer.html %}
             {% include _google_analytics.html %}              
         </div>

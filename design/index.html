@@ -1,11 +1,38 @@
 ---
-layout: default
-title: Testing Tachyons
+title: Testing Misc. Stuff
 ---
 
+<style>
+.square-shape {
+    width: 100px;
+    height: 100px;
+}    
+</style>    
 
-<section class="mw8 center">
-    Hello.
-</section>
+<script>
+const colors = ['#800020', '#942862', '#8b56a0', '#6580cd', '#2ca6e2', '#800020', '#2bc7e2'];
+
+function insertAfter(el, refNode) {
+	refNode.parentNode.insertBefore(el, refNode.nextSibling);
+}
+
+setcolors = function() {
+    var elTarget = document.querySelector("span.color-picker");
+    colors.forEach(function(color) {
+            var newEl = document.createElement('div');
+            newEl.setAttribute("class", "square-shape");
+            newEl.setAttribute("style", `background: ${color}`);
+            insertAfter(newEl, elTarget);
+        }); 
+}
 
 
+document.addEventListener("DOMContentLoaded", function(event) {
+    setcolors()
+});
+</script>
+
+
+
+
+<span class="color-picker"></span>

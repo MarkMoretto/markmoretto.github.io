@@ -1,13 +1,19 @@
-<article>
+<div class="uk-section-small">
+    <article>
     <h1>Related Posts</h1>
-    <ul>
     {% for post in site.related_posts limit: 3 %}
+    <ul class="uk-list">
         <li>
-        <a href="{{ post.url }}" title="{{post.title}}">
-            <date>{{ post.date | date_to_long_string }}</date>
-            {{ post.title }}
-        </a>
+            <a class="uk-link-text uk-text-bold" href="{{ post.url }}" title="{{ post.title }}">
+                <span>
+                    <date>{{ post.date | date_to_long_string }}</date> - <h4>{{ post.title }}</h4>
+                </span>
+            </a>
         </li>
-    {% endfor %}
+        {% if forloop.last == false %}
+            <hr class="uk-divider-small">
+        {% endif %}
     </ul>
-</article>
+    {% endfor %}
+    </article>
+</div>

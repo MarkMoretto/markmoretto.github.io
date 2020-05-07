@@ -2,17 +2,22 @@
 title: Home
 ---
 
-<div class="uk-section-small">
-	<h2>Recent Posts:</h2>
-	<article>
-		{% for post in site.posts %}
-		<ul class="uk-list">
-			<li><h3><a class="uk-link-text uk-text-bold" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
-				<div class="uk-container-xsmall uk-text-normal">
-					{{ post.content | strip_html | truncatewords: 40 }}
+<div class="uk-section uk-section-small uk-section-default">
+	<div class="uk-container uk-container-large uk-align-left">
+	<h4>Recent Posts:</h4>
+		<article>
+			{% for post in site.posts %}
+				<div class="uk-child-width-1-2@s">
+					<dl class="uk-description-list">
+						<a class="uk-link-text" href="{{ post.url }}">
+							<dt>
+								{{ post.title }}
+							</dt>
+						</a>
+						<dd>{{ post.content | strip_html | truncatewords: 40 }}</dd>
+					</dl>
 				</div>
-			</li>
-		</ul>
-		{% endfor %}
-	</article>
+			{% endfor %}
+		</article>
+	</div>
 </div>

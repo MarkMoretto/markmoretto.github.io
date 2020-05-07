@@ -26,3 +26,6 @@ $$('.color-picker')[0].on('click', '.square', function(event, square) {
     dropdown.setStyle({'background' : background});
   });
 });
+
+
+
