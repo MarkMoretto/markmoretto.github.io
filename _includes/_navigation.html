@@ -1,17 +1,24 @@
-<nav class="pa3 pa4-ns" role="navigation">
-    <a class="link dim black b f1 lh-title tc db mb1 mb2-ns" href="/" title="Home">{{ site.title }}</a>
-    <a class="black b f5 lh-copy tc db mb2 mb3-ns" title="Tagline">{{ site.subtitle }}</a>
-    <div class="tc pb1">
-        {% for item in site.data.navigation %}
-        <a href="{{ item.link }}" 
-            {% if page.url == item.link %}
-                class="link dim color-secondary-alt-1-2 f6 f5-ns dib mr3 current"
-            {% else %}
-                class="link dim color-secondary-alt-1-2 f6 f5-ns dib mr3"
-            {% endif %} 
-        title="{{ item.name }}">
-        {{ item.name }}
-        </a>
-        {% endfor %}
+<div class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+            {% for item in site.data.navigation %}
+            <li><a href="{{ item.link }}" {% if page.url == item.link %}class="uk-active"{% endif %} title="{{ item.name }}">{{ item.name }}</a></li>
+            {% endfor %}
+        </ul>
     </div>
-</nav>
+    <div class="uk-navbar-center">
+        <a class="uk-navbar-item uk-logo" href="/">{{ site.title }}</a>    
+    </div>
+    <div class="uk-navbar-right">
+        <div class="uk-navbar-item">
+            <ul class="uk-grid-small uk-grid" uk-grid>
+                <li class="uk-first-column">
+                    <a class="uk-icon-button uk-link" href="https://github.com/MarkMoretto" uk-icon="icon: github"></a>
+                </li>
+                <li>
+                    <a class="uk-icon-button uk-link" href="https://www.linkedin.com/in/mark-m-8698369" uk-icon="icon: linkedin"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

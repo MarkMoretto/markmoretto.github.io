@@ -1,0 +1,17 @@
+<nav class="pa3 pa4-ns" role="navigation">
+    <a class="link dim black b f1 lh-title tc db mb1 mb2-ns" href="/" title="Home">{{ site.title }}</a>
+    <a class="black b f5 lh-copy tc db mb2 mb3-ns" title="Tagline">{{ site.subtitle }}</a>
+    <div class="tc pb1">
+        {% for item in site.data.navigation %}
+        <a href="{{ item.link }}" 
+            {% if page.url == item.link %}
+                class="link dim color-secondary-alt-1-2 f6 f5-ns dib mr3 current"
+            {% else %}
+                class="link dim color-secondary-alt-1-2 f6 f5-ns dib mr3"
+            {% endif %} 
+        title="{{ item.name }}">
+        {{ item.name }}
+        </a>
+        {% endfor %}
+    </div>
+</nav>

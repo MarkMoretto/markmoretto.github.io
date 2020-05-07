@@ -1,0 +1,60 @@
+/*
+Error: Undefined variable: "$global-gutter".
+        on line 29 of _sass/uikit/components/grid.scss
+
+24: 
+25: 
+26: // Variables
+27: // ========================================================================
+28: 
+29: $grid-gutter-horizontal:                         $global-gutter !default;
+30: $grid-gutter-vertical:                           $grid-gutter-horizontal !default;
+31: $grid-gutter-horizontal-l:                       $global-medium-gutter !default;
+32: $grid-gutter-vertical-l:                         $grid-gutter-horizontal-l !default;
+33: 
+34: $grid-small-gutter-horizontal:                   $global-small-gutter !default;
+
+Backtrace:
+_sass/uikit/components/grid.scss:29
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:478:in `visit_variable'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:294:in `watch'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin.rb:109:in `method_missing'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:358:in `watch_or_update'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+C:/Users/Work1/AppData/Local/Programs/Ruby/bin/sass:23:in `load'
+C:/Users/Work1/AppData/Local/Programs/Ruby/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$global-gutter\".\A         on line 29 of _sass/uikit/components/grid.scss\A \A 24: \A 25: \A 26: // Variables\A 27: // ========================================================================\A 28: \A 29: $grid-gutter-horizontal:                         $global-gutter !default;\A 30: $grid-gutter-vertical:                           $grid-gutter-horizontal !default;\A 31: $grid-gutter-horizontal-l:                       $global-medium-gutter !default;\A 32: $grid-gutter-vertical-l:                         $grid-gutter-horizontal-l !default;\A 33: \A 34: $grid-small-gutter-horizontal:                   $global-small-gutter !default;"; }

@@ -2,14 +2,17 @@
 title: Home
 ---
 
-<section class="mw8 center">
-  <h2 class="avenir ph1 ph0-l">Recent Posts:</h2>
-  <article>
-    {% for post in site.posts %}
-    <div class="mb3">
-      <a class="f3 fw6 db black link hover-light-purple" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        {{ post.content | strip_html | truncatewords: 40 }}
-    </div>
-    {% endfor %}
-  </article>
-</section>
+<div class="uk-section-small">
+	<h2>Recent Posts:</h2>
+	<article>
+		{% for post in site.posts %}
+		<ul class="uk-list">
+			<li><h3><a class="uk-link-text uk-text-bold" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+				<div class="uk-container-xsmall uk-text-normal">
+					{{ post.content | strip_html | truncatewords: 40 }}
+				</div>
+			</li>
+		</ul>
+		{% endfor %}
+	</article>
+</div>

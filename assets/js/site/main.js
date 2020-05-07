@@ -3,6 +3,12 @@
 // });
 
 
+// Foot date helper
+document.addEventListener("DOMContentLoaded", function(event) {
+  document.getElementById("footer-year").innerHTML = new Date().getFullYear();
+});
+
+
 /*
 Color picker. Goes with _dropdown.scss
 */

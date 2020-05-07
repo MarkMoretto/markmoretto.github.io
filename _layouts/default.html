@@ -5,14 +5,16 @@
     </head>
     <body>
         <noscript>Please enable JavaScript to view this website.</noscript>
-        <div class="container">
-            {% include _navigation.html %}    
-            {{ content }}
-        </div>
-
-        <div class="footer">
+        <div class="app-layout">
+            <header>
+                {% include _navigation.html %}    
+            </header>
+            <main>
+                {{ content }}    
+            </main>
             {% include _footer.html %}
-            {% include _google_analytics.html %}              
+            {% include _google_analytics.html %}
+            
         </div>
     </body>
 </html>

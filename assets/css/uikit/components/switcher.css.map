@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAUA;;8EAE8E;AAE9E;;GAEG;AAEH,YAAa;EACT,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,IAAI;;AAIpB;8EAC8E;AAE9E;;GAEG;AAEH,+BAAgC;EAAE,OAAO,EAAE,IAAI;;AAE/C;;GAEG;AAEH,8BAA+B;EAAE,aAAa,EAAE,CAAC",
+"sources": ["../../../../_sass/uikit/components/switcher.scss"],
+"names": [],
+"file": "switcher.css"
+}

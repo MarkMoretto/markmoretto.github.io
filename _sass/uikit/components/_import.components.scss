@@ -1,56 +1,56 @@
 // Base
-@import "variables.scss";
-@import "mixin.scss";
-@import "base.scss";
+@import 'variables';
+@import 'mixin';
+@import 'base';
 
 // Elements
-@import "link.scss";
-@import "heading.scss";
-@import "divider.scss";
-@import "list.scss";
-@import "description-list.scss";
-@import "table.scss";
-@import "icon.scss";
-@import "form.scss"; // After: Icon
-@import "button.scss";
+@import 'link';
+@import 'heading';
+@import 'divider';
+@import 'list';
+@import 'description-list';
+@import 'table';
+@import 'icon';
+@import 'form'; // After: Icon
+@import 'button';
 
 // Layout
-@import "section.scss";
-@import "container.scss";
-@import "grid.scss";
-@import "tile.scss";
-@import "card.scss";
+@import 'section';
+@import 'container';
+@import 'grid';
+@import 'tile';
+@import 'card';
 
 // Common
-@import "close.scss"; // After: Icon
-@import "spinner.scss"; // After: Icon
-@import "totop.scss"; // After: Icon
-@import "alert.scss"; // After: Close
-@import "badge.scss";
-@import "label.scss";
-@import "overlay.scss"; // After: Icon
-@import "article.scss"; // After: Subnav
-@import "comment.scss"; // After: Subnav
-@import "search.scss"; // After: Icon
+@import 'close'; // After: Icon
+@import 'spinner'; // After: Icon
+@import 'totop'; // After: Icon
+@import 'alert'; // After: Close
+@import 'badge';
+@import 'label';
+@import 'overlay'; // After: Icon
+@import 'article'; // After: Subnav
+@import 'comment'; // After: Subnav
+@import 'search'; // After: Icon
 
 // Navs
-@import "nav.scss";
-@import "navbar.scss"; // After: Card, Grid, Nav, Icon, Search
-@import "subnav.scss";
-@import "breadcrumb.scss";
-@import "pagination.scss";
-@import "tab.scss";
-@import "slidenav.scss"; // After: Icon
-@import "dotnav.scss";
+@import 'nav';
+@import 'navbar'; // After: Card, Grid, Nav, Icon, Search
+@import 'subnav';
+@import 'breadcrumb';
+@import 'pagination';
+@import 'tab';
+@import 'slidenav'; // After: Icon
+@import 'dotnav';
 
 // JavaScript
-@import "accordion.scss";
-@import "drop.scss"; // After: Card
-@import "dropdown.scss"; // After: Card
-@import "modal.scss"; // After: Close
-@import "sticky.scss";
-@import "offcanvas.scss";
-@import "switcher.scss";
+@import 'accordion';
+@import 'drop'; // After: Card
+@import 'dropdown'; // After: Card
+@import 'modal'; // After: Close
+@import 'sticky';
+@import 'offcanvas';
+@import 'switcher';
 // Scrollspy
 // Toggle
 // Scroll

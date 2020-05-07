@@ -1,0 +1,60 @@
+/*
+Error: Undefined variable: "$global-small-font-size".
+        on line 14 of _sass/uikit/components/breadcrumb.scss
+
+9: 
+10: 
+11: // Variables
+12: // ========================================================================
+13: 
+14: $breadcrumb-item-font-size:                          $global-small-font-size !default;
+15: $breadcrumb-item-color:                              $global-muted-color !default;
+16: $breadcrumb-item-hover-color:                        $global-color !default;
+17: $breadcrumb-item-hover-text-decoration:              none !default;
+18: $breadcrumb-item-active-color:                       $global-color !default;
+19: 
+
+Backtrace:
+_sass/uikit/components/breadcrumb.scss:14
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:478:in `visit_variable'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:294:in `watch'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin.rb:109:in `method_missing'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:358:in `watch_or_update'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+C:/Users/Work1/AppData/Local/Programs/Ruby/bin/sass:23:in `load'
+C:/Users/Work1/AppData/Local/Programs/Ruby/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$global-small-font-size\".\A         on line 14 of _sass/uikit/components/breadcrumb.scss\A \A 9: \A 10: \A 11: // Variables\A 12: // ========================================================================\A 13: \A 14: $breadcrumb-item-font-size:                          $global-small-font-size !default;\A 15: $breadcrumb-item-color:                              $global-muted-color !default;\A 16: $breadcrumb-item-hover-color:                        $global-color !default;\A 17: $breadcrumb-item-hover-text-decoration:              none !default;\A 18: $breadcrumb-item-active-color:                       $global-color !default;\A 19: "; }

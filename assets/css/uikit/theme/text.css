@@ -1,0 +1,60 @@
+/*
+Error: Undefined variable: "$text-meta-color".
+        on line 14 of _sass/uikit/theme/text.scss
+
+9: 
+10: //
+11: // New
+12: //
+13: 
+14: $text-meta-link-color:                           $text-meta-color !default;
+15: $text-meta-link-hover-color:                     $global-color !default;
+16: 
+17: 
+18: // Style modifiers
+19: // ========================================================================
+
+Backtrace:
+_sass/uikit/theme/text.scss:14
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:478:in `visit_variable'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:294:in `watch'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin.rb:109:in `method_missing'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:358:in `watch_or_update'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+C:/Users/Work1/AppData/Local/Programs/Ruby/lib/ruby/gems/2.6.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+C:/Users/Work1/AppData/Local/Programs/Ruby/bin/sass:23:in `load'
+C:/Users/Work1/AppData/Local/Programs/Ruby/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$text-meta-color\".\A         on line 14 of _sass/uikit/theme/text.scss\A \A 9: \A 10: //\A 11: // New\A 12: //\A 13: \A 14: $text-meta-link-color:                           $text-meta-color !default;\A 15: $text-meta-link-hover-color:                     $global-color !default;\A 16: \A 17: \A 18: // Style modifiers\A 19: // ========================================================================"; }

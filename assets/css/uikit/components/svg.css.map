@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAQA;;8EAE8E;AAE9E;;;GAGG;AAEH,OAAO;AACP;uDAEwD;EAAE,IAAI,EAAE,YAAY;;AAC5E,yDAA0D;EAAE,MAAM,EAAE,YAAY;;AAEhF;;GAEG;AAEH,OAAQ;EAAE,SAAS,EAAE,eAAc",
+"sources": ["../../../../_sass/uikit/components/svg.scss"],
+"names": [],
+"file": "svg.css"
+}
