@@ -11,3 +11,4 @@ CNAME
 loc-*.md
 
 node_modules/
+package-lock.json

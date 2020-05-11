@@ -1,5 +1,5 @@
 # General info
-title: "Moretto"
+title: "Moretto's Follies"
 subtitle: ""
 url: https://markmoretto.github.io
 baseurl: /
@@ -14,7 +14,7 @@ incremental: false
 # markdown: redcarpet2
 # redcarpet:
 #   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
-  
+
 
 # Markdown Processing
 kramdown:
@@ -64,6 +64,22 @@ permalink: pretty
 #timezone: America/Detroit # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 #timezone: America/New_York # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
+# # https://dubsman.gitlab.io/posts/gitlab-jekyll-npm.html
+# # add bundle cache to 'vendor' for speeding up builds
+# cache:
+#   paths: 
+#     - vendor/
+
+# # https://dubsman.gitlab.io/posts/gitlab-jekyll-npm.html
+# pages:
+#   stage: deploy
+#   script:
+#     - bundle exec jekyll build -d public/
+#   artifacts:
+#     paths:
+#       - public
+#   only:
+#     - master  # this job will affect only the 'master' branch
 
 
 # Plugins (Formerly known as 'gems' -> https://github.com/elixir-lang/elixir-lang.github.com/issues/1035)
@@ -78,6 +94,7 @@ plugins:
   # - jekyll-include-cache
 
 
+
 defaults:
   - scope:
       path: ""
@@ -89,7 +106,11 @@ defaults:
     values:
       layout: "default"
 
-# UnComment once you have pygments installed. Used for code syntax highlighting.
-highlighter: rouge
 
-exclude: [Rakefile, CNAME, README.md, .gitignore]
+include: [node_modules]
+
+# Included `node_modules/lit-html/CHANGELOG.md` since bundle/liquid has a fit when dealing with '[{{}}]'
+exclude: [Rakefile, CNAME, README.md, .gitignore, package-lock.json, node_modules/lit-html/CHANGELOG.md]
+
+
+

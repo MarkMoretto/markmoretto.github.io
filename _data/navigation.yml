@@ -1,8 +1,10 @@
 - name: Home
   link: /
-- name: About
-  link: /about/index.html
 - name: Notebooks
   link: /notebooks/index.html
+- name: Experimental
+  link: /design/index.html  
 - name: Archive
   link: /archives/index.html
+- name: About
+  link: /about/index.html  
