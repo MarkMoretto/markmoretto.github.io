@@ -9,3 +9,5 @@ CNAME
 
 # Local files; Prepend with "loc-"
 loc-*.md
+
+node_modules/

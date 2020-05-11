@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/MarkMoretto/markmoretto.github.io/issues"
   },
-  "homepage": "https://github.com/MarkMoretto/markmoretto.github.io#readme"
+  "homepage": "https://github.com/MarkMoretto/markmoretto.github.io#readme",
+  "dependencies": {
+    "lit-html": "^1.2.1"
+  }
 }
