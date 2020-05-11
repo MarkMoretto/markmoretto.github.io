@@ -5,6 +5,7 @@
 _site
 *.bat
 
+CNAME
 
 # Local files; Prepend with "loc-"
 loc-*.md

@@ -1,13 +1,22 @@
 ---
 title: Testing Misc. Stuff
+FRED_SRC: //research.stlouisfed.org/fred-glance-widget.php
 ---
 
 <style>
 .square-shape {
-    width: 100px;
-    height: 100px;
-}    
-</style>    
+  width: 100px;
+  height: 100px;
+}
+
+iframe#fred {
+  border: 1px solid #333333;
+  overflow: hidden;
+  width: 190px;
+  height: 490px;
+}
+</style>  
+
 
 <script>
 const colors = ['#800020', '#942862', '#8b56a0', '#6580cd', '#2ca6e2', '#800020', '#2bc7e2'];
@@ -17,22 +26,31 @@ function insertAfter(el, refNode) {
 }
 
 setcolors = function() {
-    var elTarget = document.querySelector("span.color-picker");
-    colors.forEach(function(color) {
-            var newEl = document.createElement('div');
-            newEl.setAttribute("class", "square-shape");
-            newEl.setAttribute("style", `background: ${color}`);
-            insertAfter(newEl, elTarget);
-        }); 
+  var elTarget = document.querySelector("span.color-picker");
+  colors.forEach(function(color) {
+    var newEl = document.createElement('div');
+    newEl.setAttribute("class", "square-shape");
+    newEl.setAttribute("style", `background: ${color}`);
+    insertAfter(newEl, elTarget);
+  });
 }
 
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    setcolors()
+  setcolors()
 });
 </script>
 
 
+<script type="module">
+import {html, render} from './node_modules/lit-html/lit-html.js';
 
 
-<span class="color-picker"></span>
+
+</script>
+
+<section class="mw8 center">
+  <span class="color-picker"></span>
+  <iframe id="fred" src="{{ page.FRED_SRC }}" height="240" width="320" frameborder="0" scrolling="no"></iframe>
+</section>
+
