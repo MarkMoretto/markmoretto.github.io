@@ -12,3 +12,7 @@ loc-*.md
 
 node_modules/
 package-lock.json
+
+*.key
+*.p12
+*.pem

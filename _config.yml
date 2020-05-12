@@ -40,7 +40,15 @@ paginate: 3
 author:
   name: "Mark Moretto"
 
-
+# https://jekyllrb.com/docs/configuration/webrick/
+webrick:
+  headers:
+    Accept: application/json
+    Access-Control-Allow-Origin: http://127.0.0.1:4000
+    Access-Control-Allow-Credentials: true
+    Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+    Access-Control-Allow-Headers: Content-Type, Accept-Language, Content-Language
+    
 # GitHub repo for this site
 github:
   repo: https://github.com/markmoretto/markmoretto.github.io

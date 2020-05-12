@@ -1,15 +1,10 @@
 ---
 title: Testing Misc. Stuff
 fred_source: //research.stlouisfed.org/fred-glance-widget.php
-viz_js: /node_modules/vis-network/dist/vis-network.min.js
 ---
 
 <style type="text/css">
-  #mynetwork {
-    width: 600px;
-    height: 400px;
-    border: 1px solid lightgray;
-  }
+
   #fredwidget {
     border: 1px solid #333333;
     overflow: hidden;
@@ -23,41 +18,13 @@ viz_js: /node_modules/vis-network/dist/vis-network.min.js
 
 <div class="uk-flex uk-flex-row uk-width-auto">
   <iframe id="#fredwidget" src="{{ page.fred_source }}" height="240" width="320" frameborder="0" scrolling="no"></iframe>
-  <div id="mynetwork"></div>
+</div>
+
+<div class="uk-flex uk-flex-row uk-width-auto">
+  <div id="fred-div"></div>
 </div>
 
 
 
-
-
-
-<script type="text/javascript" src="{{ page.viz_js }}"></script>
-<script type="text/javascript">
-  // create an array with nodes
-  var nodes = new vis.DataSet([
-    {id: 1, label: 'Node 1'},
-    {id: 2, label: 'Node 2'},
-    {id: 3, label: 'Node 3'},
-    {id: 4, label: 'Node 4'},
-    {id: 5, label: 'Node 5'}
-  ]);
- 
-  // create an array with edges
-  var edges = new vis.DataSet([
-    {from: 1, to: 3},
-    {from: 1, to: 2},
-    {from: 2, to: 4},
-    {from: 2, to: 5},
-    {from: 3, to: 3}
-  ]);
- 
-  // create a network
-  var container = document.getElementById('mynetwork');
-  var data = {
-    nodes: nodes,
-    edges: edges
-  };
-  var options = {};
-  var network = new vis.Network(container, data, options);
-</script> 
+<script src="/assets/js/site/fetch-data.js"></script>
 

@@ -5,32 +5,153 @@
 // Secret API key: https://git-secret.io/
 
 
-function joinUrl(root, addr) {
-    const fslash = "/";
-    if (root.slice(-1) == fslash) {
-        return root + fslash + addr;
-        
-    } else {
-        return root + addr;
-    }
+var http = require('https');
 
+function createNode(element) {
+    return document.createElement(element);
 }
 
-const fred_url = "https://fred.stlouisfed.org/docs/api/fred/category";
-const subcat = "category"
+function append(parent, el) {
+    return parent.appendChild(el);
+}
 
-var url = new URL(joinUrl(fred_url, subcat));
-var params2 = {category_id: 125, file_type: json };
+
+
+
+var url = new URL("https://api.stlouisfed.org/fred/category");
+var params = { category_id: "125", api_key: "4e29f15827a4b030de5b2efea0dd044f", file_type: "json" };
 
 Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
 
 
-fetch(url2, {mode:"cors"})
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(e => console.log("something went wrong: " + e));
+http.get(url, function(response) {
+    var body = '';
+    completeResponse = '';
+
+    response.on('data', function(chunk) {
+        body += chunk;
+    })
+    .on('end', function() {
+        completeResponse = JSON.parse(body);
+        console.log(completeResponse);
+    })
+})
+
+// fetch(url, {mode: 'no-cors'})
+//     .then(function (response) {
+//       return response;
+//     })
+//     .then(function (resp) {
+//       let tmp = resp.json();
+//       var data = tmp.categories;
+//       mainContainer.innerHTML = `${data.id}, ${data.name}, ${data.parent_id}`;
+//     })
+//     .catch(function (err) {
+//       console.log(err);
+//     }); 
+
+    // fetch(url, {mode: 'cors'})
+    // .then(function (response) {
+    //   return response.text();
+    // })
+    // .then(function (resp) {
+    //   alert(resp);
+    // })
+    // .catch(function (err) {
+    //   console.log(err);
+    // });
+
+    // // Find out headers
+    // var req = new XMLHttpRequest();
+    // req.open('GET', document.location, false);
+    // req.send(null);
+    // var headers = req.getAllResponseHeaders().toLowerCase();
+
+    // function fetchSimilarHeaders (callback) {
+    //     var request = new XMLHttpRequest();
+    //     request.onreadystatechange = function () {
+    //         if (request.readyState === XMLHttpRequest.DONE) {
+    //             //
+    //             // The following headers may often be similar
+    //             // to those of the original page request...
+    //             //
+    //             if (callback && typeof callback === 'function') {
+    //                 callback(request.getAllResponseHeaders());
+    //             }
+    //         }
+    //     };
+    
+    //     //
+    //     // Re-request the same page (document.location)
+    //     // We hope to get the same or similar response headers to those which 
+    //     // came with the current page, but we have no guarantee.
+    //     // Since we are only after the headers, a HEAD request may be sufficient.
+    //     //
+    //     request.open('HEAD', document.location, true);
+    //     request.send(null);
+    // }    
+    // async function GetApiContent() {
+    //     let response = await fetch(url, {
+    //       mode: 'cors',
+    //       method: "GET",
+    //       credentials: 'include',
+    //       referrerPolicy: 'no-referrer',
+    //       headers: {
+    //         "Accept": "application/json",
+    //         "Access-Control-Allow-Origin": "*",
+    //         'Content-Type': 'application/x-www-form-urlencoded', // 'application/json'
+    //         'Access-Control-Allow-Credentials': 'true',
+    //         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    //         }
+    //         });
+    //     let jresp = await response.json();
+
+    //     return jresp;
+    //   }
+    
+    //   GetApiContent().then(text => console.log(text));
 
 
+    /// Using Promise, await ,async.
+    // This isn't working yet.
+    // async function GetApiContent() {
+    //     let value = await fetch(url, {
+    //         mode: "no-cors",
+    //         method: "GET",
+    //         headers: {
+    //           Accept: "application/json",
+    //           }
+    //         })
+    //         .then(response => JSON.stringify(response.text()))
+    //         .then(text => console.log(text));
+    //         return value;
+    //     }
+      
+    //     GetApiContent();
+
+    // function reqListener () {
+    //     console.log(this.responseXML);
+    //   }
+  
+    //   const xhr = new XMLHttpRequest(),
+    //    method = "GET";
+  
+    //   xhr.open(method, url, true);
+    //   xhr.setRequestHeader('Content-Type', 'text/xml; charset=UTF-8');
+    //   xhr.setRequestHeader('Access-Control-Allow-Origin', 'http://localhost:4000');
+    //   xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    //   xhr.setRequestHeader('Access-Control-Allow-Headers', 'origin, content-type, accept');
+    //   xhr.setRequestHeader('Access-Control-Allow-Credentials', 'true');       
+    //   xhr.onreadystatechange = function() {
+    //     if(xhr.readyState === XMLHttpRequest.DONE) {
+    //       var status = xhr.status;
+    //       if (status === 0 || (status >= 200 && status < 400)) {
+    //         console.log(xhr.responseXML);
+    //       }
+    //     }
+    //   }
+  
+    //   xhr.send();
 //////////////////////////////////////////////////////////
 // TESTING
 // Uses random user site: https://randomuser.me/
@@ -40,15 +161,15 @@ fetch(url2, {mode:"cors"})
 // var params2 = {results: 10};
 // Object.keys(params2).forEach(key => url2.searchParams.append(key, params2[key]));
 
+function getUrlVars() {
+    var vars = {};
+    window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
 
-// function createNode(element) {
-//     return document.createElement(element);
-// }
-
-// function append(parent, el) {
-//     return parent.appendChild(el);
-// }
-
+// getUrlVars();
 
 // fetch(url2, {mode:"cors"})
 //     .then(response => response.json())
