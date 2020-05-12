@@ -11,3 +11,33 @@
 		flex-grow: 1;
 	}
 }
+
+
+// Links 
+// color-secondary-alt-1-0 == dark blue, navy
+a.uk-link-text-main,
+.uk-link-text-main a,
+a.uk-link-text-alt,
+.uk-link-text-alt a {
+    color: $color-secondary-alt-1-0;
+    @if(mixin-exists(hook-link-text)) {@include hook-link-text();}
+}
+
+// color-secondary-1-4 == dark pink, medium purple
+a.uk-link-text-main:hover,
+.uk-link-text-main a:hover,
+.uk-link-toggle:hover .uk-link-text-main,
+.uk-link-toggle:focus .uk-link-text-main {
+    color: $color-secondary-1-4;
+    @if(mixin-exists(hook-link-text-hover)) {@include hook-link-text-hover();}
+}
+
+
+// color-primary-alt-0 == orange
+a.uk-link-text-alt:hover,
+.uk-link-text-alt a:hover,
+.uk-link-toggle:hover .uk-link-text-alt,
+.uk-link-toggle:focus .uk-link-text-alt {
+    color: $color-secondary-alt-2-4;
+    @if(mixin-exists(hook-link-text-hover)) {@include hook-link-text-hover();}
+}

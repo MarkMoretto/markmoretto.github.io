@@ -16,3 +16,4 @@ package-lock.json
 *.key
 *.p12
 *.pem
+.rnd

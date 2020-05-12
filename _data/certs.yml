@@ -1,0 +1,20 @@
+
+badges:
+  - idx: 0
+    issuer: Coursera
+    organization: IBM
+    name: Fundamentals of Scalable Data Science
+    filename: ibm-fund-scaleable-data-science.png
+    link: https://www.youracclaim.com/badges/430f006d-5a8d-4885-a65d-3c38a5a8af7c/public_url
+  - idx: 1
+    issuer: Coursera
+    organization: IBM
+    name: Advanced Machine Learning and Signal Processing
+    filename: ibm-adv-ml-and-sp.png 
+    link: https://www.youracclaim.com/badges/b47d7c77-e9b7-4685-9d77-7265f6271545/public_url
+  - idx: 2
+    issuer: Microsoft
+    organization: Microsoft
+    name: Microsoft Technical Associate
+    filename: microsoft-MTA-badge.png
+    link: https://www.youracclaim.com/badges/f18bdc2f-62ad-4205-aa49-ee8ee9049996/public_url

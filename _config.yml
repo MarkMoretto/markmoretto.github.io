@@ -45,7 +45,7 @@ author:
 webrick:
   headers:
     Accept: application/json,
-    Access-Control-Allow-Origin: https://127.0.0.1:4000//
+    Access-Control-Allow-Origin: https://127.0.0.1:4000, http://127.0.0.1:4000
     Access-Control-Allow-Credentials: true
     Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
     Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept
