@@ -79,6 +79,40 @@ var crude_params = JSON.stringify({
     'nd': '1987-05-20'});
 
 
+
+    // async function getFredData(myurl) {
+    //     let resp = await fetch(myurl, {
+    //       mode: 'no-cors',
+    //       method: 'GET',
+    //       credentials: 'include',
+    //       cache: 'only-if-cached', // *default, no-cache, reload, force-cache, only-if-cached
+    //       redirect: 'follow', // manual, *follow, error
+    //       referrerPolicy: 'strict-origin-when-cross-origin', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    //       headers: {
+    //         "Accept": "application/json",
+    //         "Access-Control-Allow-Origin": "https://127.0.0.1:4000/*",
+    //         'Access-Control-Allow-Credentials': 'true',
+    //         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    //       }
+    //       });
+    //       let data = await resp.text();
+    //       return data;
+    //   }
+
+    // (async () => {
+    //     const res = await fetch(url);
+    //     const data = await res.text();
+    //     console.log(data);
+    //   })();
+
+      
+    //   getFredData(url)
+    //     .then(data => console.log(data)); 
+
+
+
+
+
 // fetch(url, {mode: 'no-cors'})
 //     .then(function (response) {
 //       return response;
