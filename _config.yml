@@ -41,13 +41,15 @@ author:
   name: "Mark Moretto"
 
 # https://jekyllrb.com/docs/configuration/webrick/
+# Accept -> application/x-www-form-urlencoded, multipart/form-data, or text/plain
 webrick:
   headers:
-    Accept: application/json
-    Access-Control-Allow-Origin: http://127.0.0.1:4000
+    Accept: application/json,
+    Access-Control-Allow-Origin: https://127.0.0.1:4000//
     Access-Control-Allow-Credentials: true
-    Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
-    Access-Control-Allow-Headers: Content-Type, Accept-Language, Content-Language
+    Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+    Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept
+
     
 # GitHub repo for this site
 github:

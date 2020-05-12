@@ -26,5 +26,35 @@ fred_source: //research.stlouisfed.org/fred-glance-widget.php
 
 
 
-<script src="/assets/js/site/fetch-data.js"></script>
 
+<script>
+var url = new URL("https://api.stlouisfed.org/fred/category");
+var params = { category_id: "125", api_key: "4e29f15827a4b030de5b2efea0dd044f", file_type: "json" };
+
+Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+
+async function getFredData(myurl) {
+  let resp = await fetch(myurl, {
+    mode: 'no-cors',
+    method: 'GET',
+    credentials: 'include',
+    cache: 'only-if-cached', // *default, no-cache, reload, force-cache, only-if-cached
+    redirect: 'follow', // manual, *follow, error
+    referrerPolicy: 'strict-origin-when-cross-origin', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    headers: {
+      "Accept": "application/json",
+      "Access-Control-Allow-Origin": "https://127.0.0.1:4000/*",
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Credentials': 'true',
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    }
+    });
+    let data = await resp.text();
+    return data;
+}
+
+getFredData(url)
+  .then(data => console.log(data)); 
+
+
+</script>

@@ -4,8 +4,8 @@
 // Nice example: https://github.com/taniarascia/sandbox/blob/master/ghibli/scripts.js
 // Secret API key: https://git-secret.io/
 
+// https://dzone.com/articles/cors-in-node
 
-var http = require('https');
 
 function createNode(element) {
     return document.createElement(element);
@@ -16,26 +16,68 @@ function append(parent, el) {
 }
 
 
-
-
 var url = new URL("https://api.stlouisfed.org/fred/category");
 var params = { category_id: "125", api_key: "4e29f15827a4b030de5b2efea0dd044f", file_type: "json" };
 
 Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
 
 
-http.get(url, function(response) {
-    var body = '';
-    completeResponse = '';
+var crude_attrs = JSON.stringify({
+    "wti": {
+        "name": "West Texas Intermediate",
+        "column": "DCOILWTICO",
+        "start_dt": "1986-01-02"
+    },
+    "brent": {
+        "name": "Brent - Europe",
+        "column": "DCOILBRENTEU",
+        "start_dt": "1987-05-20"
+    }
+});
 
-    response.on('data', function(chunk) {
-        body += chunk;
-    })
-    .on('end', function() {
-        completeResponse = JSON.parse(body);
-        console.log(completeResponse);
-    })
-})
+var crude_params = JSON.stringify({
+    'bgcolor': '#e1e9f0',
+    'chart_type': 'line',
+    'drp': '0',
+    'fo': 'open sans',
+    'graph_bgcolor': '#ffffff',
+    'height': '450',
+    'mode': 'fred',
+    'recession_bars': 'on',
+    'txtcolor': '#444444',
+    'ts': '12',
+    'tts': '12',
+    'width': '1168',
+    'nt': '0',
+    'thu': '0',
+    'trc': '0',
+    'show_legend': 'yes',
+    'show_axis_titles': 'yes',
+    'show_tooltip': 'yes',
+    'id': 'DCOILBRENTEU',
+    'scale': 'left',
+    'cosd': '1987-05-20',
+    'coed': '2020-05-04',
+    'line_color': '#4572a7',
+    'link_values': 'false',
+    'line_style': 'solid',
+    'mark_type': 'none',
+    'mw': '3',
+    'lw': '2',
+    'ost': '-99999',
+    'oet': '99999',
+    'mma': '0',
+    'fml': 'a',
+    'fq': 'Daily',
+    'fam': 'avg',
+    'fgst': 'lin',
+    'fgsnd': '2009-06-01',
+    'line_index': '1',
+    'transformation': 'lin',
+    'vintage_date': '2020-05-09',
+    'revision_date': '2020-05-09',
+    'nd': '1987-05-20'});
+
 
 // fetch(url, {mode: 'no-cors'})
 //     .then(function (response) {
