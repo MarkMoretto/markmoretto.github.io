@@ -17,3 +17,4 @@ package-lock.json
 *.p12
 *.pem
 .rnd
+feed.xml
