@@ -18,3 +18,5 @@ package-lock.json
 *.pem
 .rnd
 _site/feed.xml
+
+.secret/

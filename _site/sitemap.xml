@@ -9,6 +9,10 @@
 <lastmod>2020-04-28T00:00:00-04:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/2020/05/13/cheryls-birthday/</loc>
+<lastmod>2020-05-13T00:00:00-04:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/archives/</loc>
 </url>
 <url>
@@ -79,6 +83,10 @@
 </url>
 <url>
 <loc>http://localhost:4000/node_modules/vis-network/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/assets/notebooks/cheryls-birthday-solution.html</loc>
+<lastmod>2020-05-13T16:42:01-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/notebooks/interactive-graph-sampler.html</loc>

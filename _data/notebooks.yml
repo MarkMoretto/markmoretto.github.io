@@ -8,7 +8,7 @@ examples:
     group: General
     notebooks:
       - name: Cheryl's Birthday Logic
-        link: /assets/notebooks/cheryls-birthday-solution.md
+        link: /assets/notebooks/cheryls-birthday-solution.html
   - idx: 2
     group: Interactive
     notebooks:
