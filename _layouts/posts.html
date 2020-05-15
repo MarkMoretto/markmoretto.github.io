@@ -9,7 +9,7 @@
                 {% include _navigation.html %}    
             </header>
             <main>
-                <article>
+                <article class="uk-article">
                     <!-- This is where the title: in your front matter gets dropped in.-->
                     <h1>{{ page.title }}</h1>
                     {% if page.author %}
@@ -21,8 +21,10 @@
                 </article>
                 {% include _related_posts.html %}
             </main>
+
             {% include _footer.html %}
-            {% include _google_analytics.html %}              
+
         </div>
+        {% include _google_analytics.html %}
     </body>
 </html>
