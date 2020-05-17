@@ -6,15 +6,33 @@ badges:
     name: Fundamentals of Scalable Data Science
     filename: ibm-fund-scaleable-data-science.png
     link: https://www.youracclaim.com/badges/430f006d-5a8d-4885-a65d-3c38a5a8af7c/public_url
+    cert_link: https://coursera.org/share/622181876a3a7a2640201a12e04b7a69
   - idx: 1
     issuer: Coursera
     organization: IBM
     name: Advanced Machine Learning and Signal Processing
     filename: ibm-adv-ml-and-sp.png 
     link: https://www.youracclaim.com/badges/b47d7c77-e9b7-4685-9d77-7265f6271545/public_url
+    cert_link: https://coursera.org/share/1c4194cf67410e707c89b4b773aeb1bf
   - idx: 2
+    issuer: Coursera
+    organization: IBM
+    name: Applied AI with DeepLearning
+    filename: applied-ai-with-deeplearning.png 
+    link: https://www.youracclaim.com/badges/1822f7d1-5130-49f6-8344-8a62354cb1a7/public_url
+    cert_link: https://www.coursera.org/account/accomplishments/records/8MMAX9RGR5K7
+  - idx: 3
     issuer: Microsoft
     organization: Microsoft
     name: Microsoft Technical Associate
     filename: microsoft-MTA-badge.png
     link: https://www.youracclaim.com/badges/f18bdc2f-62ad-4205-aa49-ee8ee9049996/public_url
+    cert_link: 
+certificates:
+  - idx: 0
+    issuer: Coursera.org
+    organization: University of Michigan
+    name: Statistics with Python
+    filename: 
+    link: 
+    cert_link: https://coursera.org/share/09b6aaccb0bd7e16f96367156f626e71
