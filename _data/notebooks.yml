@@ -1,6 +1,6 @@
 examples:
   - idx: 0
-    group: Coursera - IBM AI and Deep Learning
+    group: IBM AI and Deep Learning
     notebooks:
       - name: Feed-Forward NN Using Keras
         link: /assets/notebooks/wk-2-keras-sampler.html
@@ -10,12 +10,7 @@ examples:
       - name: Cheryl's Birthday Logic
         link: /assets/notebooks/cheryls-birthday-solution.html
   - idx: 2
-    group: Interactive
-    notebooks:
-      - name: Interactive Network Graphs
-        link: /assets/notebooks/interactive-graph-sampler.html   
-  - idx: 3
     group: General
     notebooks:
       - name: LMT Application Analysis
-        link: /assets/notebooks/lmt-app-history-parsing.html
+        link: /assets/notebooks/lmt-app-history.html

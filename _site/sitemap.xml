@@ -85,6 +85,10 @@
 <loc>http://localhost:4000/node_modules/vis-network/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/assets/docs/resume/moretto-resume-ds-da.pdf</loc>
+<lastmod>2020-05-17T14:10:59-04:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/assets/notebooks/cheryls-birthday-solution.html</loc>
 <lastmod>2020-05-13T16:42:01-04:00</lastmod>
 </url>
@@ -93,8 +97,8 @@
 <lastmod>2020-05-06T13:43:09-04:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/assets/notebooks/lmt-app-history-parsing.html</loc>
-<lastmod>2020-05-18T20:28:25-04:00</lastmod>
+<loc>http://localhost:4000/assets/notebooks/lmt-app-history.html</loc>
+<lastmod>2020-05-18T20:36:24-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/notebooks/wk-2-keras-sampler.html</loc>
