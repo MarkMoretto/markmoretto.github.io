@@ -1,16 +1,16 @@
-examples:
+groups:
   - idx: 0
-    group: IBM AI and Deep Learning
+    name: General
     notebooks:
-      - name: Feed-Forward NN Using Keras
-        link: /assets/notebooks/wk-2-keras-sampler.html
+      - idx: 0
+        name: LMT Application Analysis
+        link: /assets/notebooks/lmt-app-history.html      
+      - idx: 1
+        name: Cheryl's Birthday Logic
+        link: /assets/notebooks/cheryls-birthday-solution.html       
   - idx: 1
-    group: General
+    name: Examples - Deep Learning
     notebooks:
-      - name: Cheryl's Birthday Logic
-        link: /assets/notebooks/cheryls-birthday-solution.html
-  - idx: 2
-    group: General
-    notebooks:
-      - name: LMT Application Analysis
-        link: /assets/notebooks/lmt-app-history.html
+      - idx: 0
+        name: Feed-Forward NN Using Keras
+        link: /assets/notebooks/wk-2-keras-sampler.html

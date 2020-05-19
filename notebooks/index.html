@@ -3,18 +3,25 @@ title: Jupyter Notebook examples
 todo: add dropdown menu
 ---
 
-<section class="mw8 center">
+<section class="uk-section uk-section-xsmall uk-section-default">
 
-    {% assign nbsort = site.data.notebooks.examples | sort_natural: 'group'  %}
-    {% assign nblist = nbsort | sort_natural: 'nb_name'  %}
+    {% assign grouplist = site.data.notebooks.groups | sort_natural: 'idx'  %}
 
-    {% for item in nblist %}
-    <h2 class="avenir ph1 ph0-l">{{ item.group }}</h2>
-    <ul class="list pl0 ml0 mw6">
-        {% for nb in item.notebooks %}
-            <li class="ph2 pv2 bb b--blue br2">
-                <a class="f4 fw4 black link hover-light-purple" href="{{ nb.link }}" title="{{ nb.name }}" target="_blank">{{ nb.name }}</a>
-            </li>
+    {% for grp in grouplist %}
+    <h2 class="uk-text-large">{{ grp.name }}</h2>
+    <ul class="uk-list uk-list-bullet">
+
+        {% assign nblist = grouplist | sort_natural: 'idx'  %}
+
+        {% for nb in grp.notebooks %}
+          {% assign mod_res = nb.idx | modulo: 2 %}
+          <li><a href="{{ nb.link }}"
+              {% if mod_res == 0 %}class="uk-link-text-main"
+              {% else %}class="uk-link-text-alt"
+              {% endif %} 
+              title="{{ nb.name }}"
+              target="_blank">{{ nb.name }}</a>
+          </li>
         {% endfor %}
     </ul>
     {% endfor %}
