@@ -1,6 +1,7 @@
 ---
 title: Jupyter Notebook examples
 todo: add dropdown menu
+sidenav: https://shubhamjain.co/til/creating-responsive-menu-uikit/
 ---
 
 <section class="uk-section uk-section-xsmall uk-section-default">
@@ -16,11 +17,12 @@ todo: add dropdown menu
         {% for nb in grp.notebooks %}
           {% assign mod_res = nb.idx | modulo: 2 %}
           <li><a href="{{ nb.link }}"
-              {% if mod_res == 0 %}class="uk-link-text-main"
-              {% else %}class="uk-link-text-alt"
+              {% if mod_res == 0 %}
+              class="uk-link-text-main"
+              {% else %}
+              class="uk-link-text-alt"
               {% endif %} 
-              title="{{ nb.name }}"
-              target="_blank">{{ nb.name }}</a>
+              title="{{ nb.name }}" target="_blank">{{ nb.name }}</a>
           </li>
         {% endfor %}
     </ul>

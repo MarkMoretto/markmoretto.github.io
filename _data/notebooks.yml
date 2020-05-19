@@ -7,10 +7,16 @@ groups:
         link: /assets/notebooks/lmt-app-history.html      
       - idx: 1
         name: Cheryl's Birthday Logic
-        link: /assets/notebooks/cheryls-birthday-solution.html       
+        link: /assets/notebooks/cheryls-birthday-solution.html      
   - idx: 1
     name: Examples - Deep Learning
     notebooks:
       - idx: 0
         name: Feed-Forward NN Using Keras
         link: /assets/notebooks/wk-2-keras-sampler.html
+  - idx: 2
+    name: Fun With Algorithms
+    notebooks:
+      - idx: 0
+        name: Piano Key Colors
+        link: /assets/notebooks/piano-key-colors.html     
