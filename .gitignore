@@ -2,7 +2,7 @@
 .jekyll-cache
 .sass-cache
 .DS_Store
-_site
+_site/
 *.bat
 
 CNAME
@@ -17,6 +17,7 @@ package-lock.json
 *.p12
 *.pem
 .rnd
-_site/feed.xml
+
+_includes/*-tachyons.html
 
 .secret/

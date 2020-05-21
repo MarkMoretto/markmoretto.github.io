@@ -25,8 +25,7 @@
   },
   "homepage": "https://github.com/MarkMoretto/markmoretto.github.io#readme",
   "dependencies": {
-    "cors": "^2.8.5",
-    "lit-html": "^1.2.1",
+    "preact": "^10.4.4",
     "vis-network": "^7.6.4"
   }
 }

@@ -1,42 +1,12 @@
 ---
+layout: default
 title: Testing Misc. Stuff
 fred_source: //research.stlouisfed.org/fred-glance-widget.php
+render_with_liquid: disabled
 ---
 
-<style type="text/css">
 
-  #fredwidget {
-    border: 1px solid #333333;
-    overflow: hidden;
-    width: 190px;
-    height: 490px;
-  }
-</style>
+<section class="uk-section uk-section-small uk-section-default">
+</section>
 
 
-
-
-<div class="uk-flex uk-flex-row uk-width-auto">
-  <iframe id="#fredwidget" src="{{ page.fred_source }}" height="240" width="320" frameborder="0" scrolling="no"></iframe>
-</div>
-
-<div class="uk-flex uk-flex-row uk-width-auto">
-  <div id="fred-div"></div>
-</div>
-
-
-
-
-<script>
-  var url = new URL("https://api.stlouisfed.org/fred/category");
-  var params = { category_id: "125", api_key: "4e29f15827a4b030de5b2efea0dd044f", file_type: "json" };
-  Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
-
-
-  (async () => {
-      const res = await fetch(url);
-      const data = await res.text();
-      console.log(data);
-    })();
-
-</script>
