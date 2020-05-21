@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/MarkMoretto/markmoretto.github.io#readme",
   "dependencies": {
-    "preact": "^10.4.4",
     "vis-network": "^7.6.4"
   }
 }

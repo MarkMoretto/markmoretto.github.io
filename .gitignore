@@ -1,17 +1,20 @@
 # Jekyll stuff
 .jekyll-cache
 .sass-cache
+
+node_modules/
+package-lock.json
 .DS_Store
 _site/
-*.bat
-
+dist
 CNAME
+
+*.bat
+*.log
 
 # Local files; Prepend with "loc-"
 loc-*.md
 
-node_modules/
-package-lock.json
 
 *.key
 *.p12
