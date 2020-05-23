@@ -63,7 +63,8 @@ github:
 googleID: 164816712-1
 
 # Style of permalinks
-permalink: pretty
+# permalink: pretty
+# permalink: weekdate
 
 # Variable format options for URL styles below
 # pretty                                          => /2009/04/29/slap-chop/index.html
@@ -120,6 +121,15 @@ defaults:
       layout: "default"
 
 
+
+# Collection of posts and topics
+collections:
+  site_collections:
+    output: true
+    permalink: /:name/:title
+
+
+# Folders to include in top-level search
 include: [node_modules]
 
 # Included `node_modules/lit-html/CHANGELOG.md` since bundle/liquid has a fit when dealing with '[{{}}]'
