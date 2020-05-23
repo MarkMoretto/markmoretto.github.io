@@ -111,7 +111,6 @@ plugins:
 
 defaults:
   - scope:
-      path: ""
       path: "posts"
     values:
       layout: "posts"  
@@ -124,9 +123,9 @@ defaults:
 
 # Collection of posts and topics
 collections:
-  site_collections:
+  languages:
     output: true
-    permalink: /:name/:title
+    permalink: /:collection/:path
 
 
 # Folders to include in top-level search

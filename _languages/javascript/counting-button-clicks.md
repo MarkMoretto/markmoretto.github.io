@@ -1,10 +1,10 @@
 ---
 title: Counting Clicks
-layout: post
+layout: default
 author: Mark M.
 date: 2020-05-22
 dom_ref_page: https://www.w3schools.com/js/js_htmldom_navigation.asp
-categories: [javascript, webdev, snippets]
+categories: [webdev, snippets]
 tags: [javascript, scripting, webdev, browser, languages, OOP, object-oriented programming]
 ---
 

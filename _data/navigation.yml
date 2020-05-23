@@ -1,10 +1,10 @@
 - name: Home
   link: /
 - name: Notebooks
-  link: /notebooks/index.html
+  link: /notebooks/
 - name: Experimental
-  link: /design/index.html  
+  link: /design/
 - name: Archive
-  link: /archives/index.html
+  link: /archives/
 - name: About
-  link: /about/index.html  
+  link: /about/
