@@ -11,7 +11,6 @@ Gemfile
 .DS_Store
 _site/
 dist
-CNAME
 
 *.bat
 *.log
