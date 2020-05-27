@@ -1,89 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>http://localhost:4000/languages/javascript/counting-button-clicks</loc>
-<lastmod>2020-05-22T00:00:00-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/blog/machine%20learning/2020/04/28/feed-forward-nn.html</loc>
-<lastmod>2020-04-28T00:00:00-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/2020/04/28/test-post.html</loc>
-<lastmod>2020-04-28T00:00:00-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/2020/05/13/cheryls-birthday.html</loc>
-<lastmod>2020-05-13T00:00:00-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/design/all-pages.html</loc>
-</url>
-<url>
-<loc>http://localhost:4000/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/archives/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/design/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/notebooks/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/about/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/assets/notebooks/cheryls-birthday-solution.html</loc>
-</url>
-<url>
-<loc>http://localhost:4000/assets/notebooks/interactive-graph-sampler.html</loc>
-</url>
-<url>
-<loc>http://localhost:4000/assets/notebooks/wk-2-keras-sampler.html</loc>
-</url>
-<url>
-<loc>http://localhost:4000/color-patterns.html</loc>
-</url>
-<url>
-<loc>http://localhost:4000/loc-project-ideas.html</loc>
-</url>
-<url>
-<loc>http://localhost:4000/node_modules/vis-network/HISTORY.html</loc>
-</url>
-<url>
-<loc>http://localhost:4000/node_modules/vis-network/README.html</loc>
-</url>
-<url>
-<loc>http://localhost:4000/node_modules/vis-network/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/assets/docs/resume/moretto-resume-ds-da.pdf</loc>
-<lastmod>2020-05-17T14:10:59-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/assets/notebooks/cheryls-birthday-solution.html</loc>
-<lastmod>2020-05-13T16:42:01-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/assets/notebooks/interactive-graph-sampler.html</loc>
-<lastmod>2020-05-06T13:43:09-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/assets/notebooks/lmt-app-history.html</loc>
-<lastmod>2020-05-18T20:36:24-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/assets/notebooks/piano-key-colors.html</loc>
-<lastmod>2020-05-18T21:41:02-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/assets/notebooks/wk-2-keras-sampler.html</loc>
-<lastmod>2020-05-01T22:40:46-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/notebooks/piano-key-colors.html</loc>
-<lastmod>2020-05-23T11:11:44-04:00</lastmod>
-</url>
+<!-- <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <url>
+        <loc>/design/all-pages.html</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/feed.xml</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/design/</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/notebooks/</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/archives/</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/about/</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/loc-project-ideas.html</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/sitemap.xml</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/assets/css/styles.css</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/assets/css/style.css</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/assets/notebooks/cheryls-birthday-solution.html</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/assets/notebooks/interactive-graph-sampler.html</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/assets/notebooks/wk-2-keras-sampler.html</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/color-patterns.html</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/node_modules/vis-network/HISTORY.html</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/node_modules/vis-network/README.html</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/node_modules/vis-network/</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/robots.txt</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    
+    <url>
+        <loc>/2020/05/13/cheryls-birthday.html</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/2020/04/28/test-post.html</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/blog/machine%20learning/2020/04/28/feed-forward-nn.html</loc>
+        <lastmod>2020-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
 </urlset>

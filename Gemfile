@@ -29,11 +29,6 @@ group :jekyll_plugins do
     # gem "jekyll-data"
 
 
-    
-    # From github vulnerability alert.
-    gem "activesupport", ">= 4.1.11"
-
-
     ### From the following:
     ### https://github.com/timlockridge/timlockridgedotcom/blob/master/Gemfile
     # gem "jekyll-paginate"
@@ -43,8 +38,9 @@ group :jekyll_plugins do
     ### https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/installation.md
     gem 'jekyll-seo-tag'
 
-    ### From a GitHub vulnerability alert.
-    gem "nokogiri", ">= 1.10.8"
+    ### GitHub vulnerability alert remedies
+    gem "nokogiri", ">= 1.10.8" # 2020-01(?)
+    gem "activesupport", ">= 6.0.3.1" # 2020-05
 
     ### Timezone Data Source not found error.
     ### Added this Gem to resolve.

@@ -113,7 +113,11 @@ defaults:
   - scope:
       path: "posts"
     values:
-      layout: "posts"  
+      layout: "post"
+  - scope:
+      path: "languages"
+    values:
+      layout: "post"      
   - scope:
       path: ""
     values:
