@@ -11,19 +11,7 @@
         <script src='/node_modules/@fullcalendar/timegrid/main.min.js'></script>
 
         <script>
-            function getToday() {
-                var today = new Date();
-                var dd = String(today.getDate()).padStart(2, '0');
-                var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-                var yyyy = today.getFullYear();
-
-                today = yyyy + "-" + mm + "-" + dd;
-                return today;
-            }
-
-            //defaultDate: getToday()
-
-
+            // TODO: Move events to different format or source.
             document.addEventListener('DOMContentLoaded', function() {
               var calendarEl = document.getElementById('calendar');
               var selectedDt = document.getElementById('sel-date');
@@ -38,7 +26,7 @@
                     right: 'dayGridMonth,timeGridWeek,timeGridDay'
                 },        
                 timeZone: 'local', 
-                select: function(info) {
+                dateClick: function(info) {
                     if (info.dateStr) {
                         selectedDt.innerHTML = `Date selected: ${info.dateStr}`;
                         console.log(`Clicked on day: ${info.dateStr}`);
