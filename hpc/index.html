@@ -12,6 +12,20 @@ js: /assets/js/pyodide/pyodide.js
     <p>The page is running Python language version: <span id="pyver" style="font-weight: 800;"></span></p>
 </div>
 
+<div class="uk-section uk-section-xsmall uk-section-default">
+
+    <p id="test-result">Find the greatest common divisor of two integers.</p>
+
+
+    <input type="text" name="number1" placeholder="Enter a number.">
+    <input type="text" name="number2" placeholder="Enter another number.">
+    <button type="submit" onclick="pySumTwo()">Submit</button>
+
+
+</div>
+
+
+
 
 <script type="text/javascript">
     let testSnippet1 = `
@@ -19,12 +33,42 @@ js: /assets/js/pyodide/pyodide.js
     sys.version
     `;
 
-    let versionEl = document.querySelector("#pyver")
+    let func_gcd = `
+        def greatest_common_divisor(a, b):
+            if isinstance(a, (int, float)) and isinstance(b, (int, float)): 
+                if a < b:
+                    a, b = b, a
+
+                while a % b != 0:
+                    a, b = b, a % b
+
+                return b        
+        `;
+
+    function pySumTwo() {
+        
+        let val1 = document.querySelector("input[name='number1']").value;
+        let val2 = document.querySelector("input[name='number2']").value;
+
+        let inputTest = `
+        ${func_gcd}
+        greatest_common_divisor(${val1}, ${val2})
+        `;
+
+
+        let sumTwoResult = pyodide.runPython(inputTest);
+
+        let msg = `The greatest common divisor of ${val1} and ${val2} is ${sumTwoResult}`
+
+        document.querySelector("#test-result").innerHTML = msg;
+
+    }
+
 
     languagePluginLoader.then(function () {
         console.log(pyodide.runPython('import sys\nsys.version'));
-        console.log(pyodide.runPython('print(1 + 2)'));
         let pyodieVer = pyodide.runPython(testSnippet1);
-        versionEl.innerHTML = `${pyodieVer}.`;
+        document.querySelector("#pyver").innerHTML = `${pyodieVer}.`;
+
     });
 </script>
