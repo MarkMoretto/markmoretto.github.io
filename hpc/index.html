@@ -1,17 +1,10 @@
 ---
 title: Python iodide
-layout: flex
 js: /assets/js/pyodide/pyodide.js
 ---
 
 <!-- Add pyodide assets -->
-{% contentfor js %}
-<script type="text/javascript">
-    // set the pyodide files URL (packages.json, pyodide.asm.data etc)
-    window.languagePluginUrl = 'https://pyodide-cdn2.iodide.io/v0.15.0/full/';
-</script>
-<script src="{{ page.js }}"></script>
-{% endcontentfor %}
+{% include _pyodide_scripts.html %}    
 
 <div class="uk-section uk-section-xsmall uk-section-default">
     <h2>This is a High-Performance Computing sampler section.</h2>
