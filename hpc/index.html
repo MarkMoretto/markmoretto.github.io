@@ -1,0 +1,37 @@
+---
+title: Python iodide
+layout: flex
+js: /assets/js/pyodide/pyodide.js
+---
+
+<!-- Add pyodide assets -->
+{% contentfor js %}
+<script type="text/javascript">
+    // set the pyodide files URL (packages.json, pyodide.asm.data etc)
+    window.languagePluginUrl = 'https://pyodide-cdn2.iodide.io/v0.15.0/full/';
+</script>
+<script src="{{ page.js }}"></script>
+{% endcontentfor %}
+
+<div class="uk-section uk-section-xsmall uk-section-default">
+    <h2>This is a High-Performance Computing sampler section.</h2>
+    <br>
+    <p>The page is running Python language version: <span id="pyver" style="font-weight: 800;"></span></p>
+</div>
+
+
+<script type="text/javascript">
+    let testSnippet1 = `
+    import sys
+    sys.version
+    `;
+
+    let versionEl = document.querySelector("#pyver")
+
+    languagePluginLoader.then(function () {
+        console.log(pyodide.runPython('import sys\nsys.version'));
+        console.log(pyodide.runPython('print(1 + 2)'));
+        let pyodieVer = pyodide.runPython(testSnippet1);
+        versionEl.innerHTML = `${pyodieVer}.`;
+    });
+</script>

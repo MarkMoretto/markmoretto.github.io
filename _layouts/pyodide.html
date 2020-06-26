@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include _head.html %}
+
+        <script src="/assets/js/pyodide/pyodide.js"></script>
+
+    </head>
+    <body>
+        <noscript>Please enable JavaScript to view this website.</noscript>
+        <div class="app-layout">
+            <header>
+                {% include _navigation.html %}    
+            </header>
+            <main>
+                <div class="uk-section uk-section-large uk-padding-remove-top">
+
+                    <div class="uk-container uk-container-xsmall">
+                        <div id='sel-date' class="uk-text-center">No date selected.</div>
+                    </div>
+
+                    <div class="uk-container uk-container-expand">
+                        <div id='calendar'></div>
+                    </div>
+                </div>
+            </main>
+            
+            {% include _footer.html %}
+
+        </div>
+
+        {% include _google_analytics.html %}
+
+    </body>
+</html>    
