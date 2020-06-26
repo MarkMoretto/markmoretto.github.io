@@ -20,8 +20,14 @@ js: /assets/js/pyodide/pyodide.js
     <button type="submit" onclick="pyGCD()">Submit</button>
     <button type="submit" onclick="clearInput()">Clear</button>
     <button type="submit" onclick="revertInput()">Get Previous</button>
-
+    <br>
 </div>
+
+<p id="py-func-1-intro"></p> 
+<pre>
+    <p id="py-func-1"></p>   
+</pre>
+
 
 
 
@@ -47,7 +53,9 @@ js: /assets/js/pyodide/pyodide.js
     }
 
 
-    let func_gcd = `
+    function pyGCD() {
+
+        let func_gcd = `
         def greatest_common_divisor(a, b):
             if isinstance(a, (int, float)) and isinstance(b, (int, float)): 
                 if a < b:
@@ -59,7 +67,6 @@ js: /assets/js/pyodide/pyodide.js
                 return b        
         `;
 
-    function pyGCD() {
 
         let val1 = document.querySelector("input[name='number1']").value;
         let val2 = document.querySelector("input[name='number2']").value;
@@ -79,6 +86,9 @@ js: /assets/js/pyodide/pyodide.js
 
         document.querySelector("#test-result").innerHTML = msg;
 
+        document.querySelector("#py-func-1-intro").innerHTML = `The function used to calculate these numbers is reprinted below:`;
+        document.querySelector("#py-func-1").innerHTML = `${func_gcd}`;
+        
         // Clear previous responses.
         clearInput();
     }
