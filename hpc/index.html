@@ -13,14 +13,13 @@ js: /assets/js/pyodide/pyodide.js
 </div>
 
 <div class="uk-section uk-section-xsmall uk-section-default">
-
     <p id="test-result">Find the greatest common divisor of two integers.</p>
-
 
     <input type="text" name="number1" placeholder="Enter a number.">
     <input type="text" name="number2" placeholder="Enter another number.">
-    <button type="submit" onclick="pySumTwo()">Submit</button>
-
+    <button type="submit" onclick="pyGCD()">Submit</button>
+    <button type="submit" onclick="clearInput()">Clear</button>
+    <button type="submit" onclick="revertInput()">Get Previous</button>
 
 </div>
 
@@ -28,10 +27,25 @@ js: /assets/js/pyodide/pyodide.js
 
 
 <script type="text/javascript">
+
     let testSnippet1 = `
     import sys
     sys.version
     `;
+
+    // Clear form inputs.
+    clearInput = function() {
+        document.querySelector("input[name='number1']").value = "";
+        document.querySelector("input[name='number2']").value = "";
+    }
+
+    // Retrieve last input from form, if required.
+    revertInput = function() {
+        clearInput();
+        document.querySelector("input[name='number1']").value = localStorage.getItem("prev_val1");
+        document.querySelector("input[name='number2']").value = localStorage.getItem("prev_val2");
+    }
+
 
     let func_gcd = `
         def greatest_common_divisor(a, b):
@@ -45,23 +59,33 @@ js: /assets/js/pyodide/pyodide.js
                 return b        
         `;
 
-    function pySumTwo() {
-        
+    function pyGCD() {
+
         let val1 = document.querySelector("input[name='number1']").value;
         let val2 = document.querySelector("input[name='number2']").value;
+
+        // Store previous values for retrieval.
+        localStorage.setItem("prev_val1", val1);
+        localStorage.setItem("prev_val2", val2);
 
         let inputTest = `
         ${func_gcd}
         greatest_common_divisor(${val1}, ${val2})
         `;
 
-
         let sumTwoResult = pyodide.runPython(inputTest);
 
-        let msg = `The greatest common divisor of ${val1} and ${val2} is ${sumTwoResult}`
+        let msg = `The greatest common divisor of ${val1} and ${val2} is <strong>${sumTwoResult}</strong>.`;
 
         document.querySelector("#test-result").innerHTML = msg;
 
+        // Clear previous responses.
+        clearInput();
+    }
+
+    clearInput = function() {
+        document.querySelector("input[name='number1']").value = "";
+        document.querySelector("input[name='number2']").value = "";
     }
 
 
