@@ -3,32 +3,18 @@ title: Home
 ---
 
 <div class="uk-section uk-section-xsmall">
-	<div class="uk-container uk-container-large uk-align-left">
-		<p>Hi!  My name is Mark Moretto and welcome to my (relatively) new website.</p>
-		<p>The basis for this site will be posting demos of data science projects, snippets of various scripts I might find useful,
-			or blog posts about personal and professional interests.</p>
-		<p>Check out recent notebooks <a class="uk-link-text-main" href="notebooks/">here</a>
-				or look at post archives <a class="uk-link-text-main" href="archives/">here</a>.</p>
+	<div class="uk-container uk-container-auto uk-align-left">
+		<p>Hi! My name is Mark and welcome to my website.</p>
+		<p>The basis for this site will be posting demos of data science projects, snippets of various code, and occasional blog posts.</p>
 		<p>Grab a copy of my recent resume by clicking <a class="uk-link-text-main" href="{{ page.resumelink }}" target="_blank">here</a>.</p>
 		<hr class="uk-divider-icon">
-	</div>
-
-	
-	<div class="uk-container uk-container-small uk-align-left">
-	<h4>Recent Posts:</h4>
-		<article class="uk-article">
-			{% for post in site.posts %}
-				<div class="uk-child-width-1-2@s">
-					<dl class="uk-description-list">
-						<a class="uk-link-text" href="{{ post.url }}">
-							<dt>
-								{{ post.title }}
-							</dt>
-						</a>
-						<dd>{{ post.content | strip_html | truncatewords: 40 }}</dd>
-					</dl>
-				</div>
-			{% endfor %}
-		</article>
+	</div>		
+</div>				
+<div class="uk-section uk-section-xsmall">
+	<div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid>
+		<div class="uk-card uk-card-default uk-card-body uk-align-center">
+			<h3 class="uk-card-title">Latest News</h3>
+			<p>There's a new section for highlighting some High-Performance Computing demos.  Check it out by clicking <a href="hpc/" target="_blank">here</a>.</p>
+		</div>
 	</div>
 </div>

@@ -1,4 +1,22 @@
----
 
-js: /assets/js/site/hpc/juliaset.js
----
+<div class="uk-container uk-container-small">
+
+    <p>Current value: <span id="rng-val"></span></p>
+
+    <label class="uk-form-label" for="test-range">Range</label>
+    <div class="uk-form-controls uk-form-controls-text">
+        <input class="uk-range" id="test-range" type="range" value="5" min="0" max="10" step="1">
+    </div>
+</div>
+
+
+<script type="text/javascript">
+var slider = document.querySelector("input[id='test-range']");
+var output = document.querySelector("#rng-val");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+    output.innerHTML = slider.value;
+};
+
+</script>
