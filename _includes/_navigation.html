@@ -2,7 +2,9 @@
     <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
             {% for item in site.data.navigation %}
-            <li><a href="{{ item.link }}" {% if page.url == item.link %}class="uk-active"{% endif %} title="{{ item.name }}">{{ item.name }}</a></li>
+                <li {% if page.url == item.link %}class="uk-active"{% endif %}>
+                    <a href="{{ item.link }}" {% if page.url == item.link %}class="uk-active"{% endif %} title="{{ item.name }}">{{ item.name }}</a>
+                </li>  
             {% endfor %}
         </ul>
     </div>

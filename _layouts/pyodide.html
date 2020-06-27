@@ -3,26 +3,21 @@
     <head>
         {% include _head.html %}
 
-        <script src="/assets/js/pyodide/pyodide.js"></script>
+        <!-- Add pyodide assets -->
+        {% include _pyodide_scripts.html %}
 
     </head>
     <body>
         <noscript>Please enable JavaScript to view this website.</noscript>
+
         <div class="app-layout">
+
             <header>
                 {% include _navigation.html %}    
             </header>
+
             <main>
-                <div class="uk-section uk-section-large uk-padding-remove-top">
-
-                    <div class="uk-container uk-container-xsmall">
-                        <div id='sel-date' class="uk-text-center">No date selected.</div>
-                    </div>
-
-                    <div class="uk-container uk-container-expand">
-                        <div id='calendar'></div>
-                    </div>
-                </div>
+                {{ content }}    
             </main>
             
             {% include _footer.html %}

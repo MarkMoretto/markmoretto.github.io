@@ -1,10 +1,25 @@
 - name: Home
   link: /
+
 - name: Notebooks
   link: /notebooks/
+
+# High-Performance Computing section
 - name: HPC
   link: /hpc/
+  sections:
+    - name: gcd
+      title: Greatest Common Divisor
+      link: /gcd/
+      url: gcd.html
+
+    - name: julia
+      title: Julia Set
+      link: /julia-set/
+      url: julia-set.html
+
 - name: Archive
   link: /archives/
+
 - name: About
   link: /about/
