@@ -6,31 +6,52 @@ js: /assets/js/pyodide/pyodide.js
 <!-- Add pyodide assets -->
 {% include _pyodide_scripts.html %}    
 
-<div class="uk-section uk-section-xsmall uk-section-default">
-    <h2>This is a High-Performance Computing sampler section.</h2>
-    <br>
-    <p>The page is running Python language version: <span id="pyver" style="font-weight: 800;"></span></p>
+<div class="uk-section uk-section-small">
+    <div class="uk-container uk-container-auto uk-text-center">
+        <h2 class="uk-padding-remove uk-margin-remove">This is a High-Performance Computing sampler section.</h2>
+        <p>The page is running Python language version: <span id="pyver" style="font-weight: 800;"></span></p>
+    </div>
+
+    <div class="uk-container uk-container-small uk-align-left">
+        <p id="test-result" class="uk-text-large">Find the greatest common divisor of two integers.</p>
+
+        <input class="uk-input uk-width-1-3" type="text" name="number" id="number1" placeholder="Enter a number.">
+        <input class="uk-input uk-width-1-3" type="text" name="number" id="number2" placeholder="Enter another number.">
+        <br>
+        <div class="uk-button-group uk-margin-bottom uk-margin-top">
+            <button class="uk-button uk-button-primary uk-button-small" onclick="pyGCD()">Submit</button>
+        </div>
+        <br>
+        <div class="uk-button-group uk-margin-bottom">
+            <button class="uk-button uk-button-default uk-button-small" onclick="clearInput()">Clear</button>
+            <button class="uk-button uk-button-default uk-button-small" onclick="revertInput()">Get Previous</button>   
+        </div>
+        <br>
+        <div class="uk-button-group">
+            <button class="uk-button uk-button-secondary uk-button-small" onclick="toggleDiv()">Show Function</button>
+        </div>
+    </div>
 </div>
 
-<div class="uk-section uk-section-xsmall uk-section-default">
-    <p id="test-result">Find the greatest common divisor of two integers.</p>
-
-    <input type="text" name="number1" placeholder="Enter a number.">
-    <input type="text" name="number2" placeholder="Enter another number.">
-    <button type="submit" onclick="pyGCD()">Submit</button>
-    <button type="submit" onclick="clearInput()">Clear</button>
-    <button type="submit" onclick="revertInput()">Get Previous</button>
-    <br>
+<div class="uk-section uk-section-xsmall">
+    <div class="uk-container uk-container-small uk-align-left" id="snippet" style="display: none;">
+        <p uk-margin>
+            The function used to calculate these numbers is reprinted below:
+        </p>
+    {% highlight python %}
+    def greatest_common_divisor(a, b):
+        if isinstance(a, int) and isinstance(b, int): 
+            if a < b:
+                a, b = b, a
+    
+            while a % b != 0:
+                a, b = b, a % b
+    
+            return b 
+    {% endhighlight %}    
+    </div>  
 </div>
-
-<p id="py-func-1-intro"></p> 
-<pre>
-    <p id="py-func-1"></p>   
-</pre>
-
-
-
-
+  
 
 <script type="text/javascript">
 
@@ -41,23 +62,34 @@ js: /assets/js/pyodide/pyodide.js
 
     // Clear form inputs.
     clearInput = function() {
-        document.querySelector("input[name='number1']").value = "";
-        document.querySelector("input[name='number2']").value = "";
+        let iarr = document.querySelectorAll("input[name^='number']");;
+        for (var i = 0; i<iarr.length; i++) {
+            iarr[i].value = "";
+        }
     }
 
     // Retrieve last input from form, if required.
     revertInput = function() {
         clearInput();
-        document.querySelector("input[name='number1']").value = localStorage.getItem("prev_val1");
-        document.querySelector("input[name='number2']").value = localStorage.getItem("prev_val2");
+        document.querySelector("#number1").value = sessionStorage.getItem("prev_val1");
+        document.querySelector("#number2").value = sessionStorage.getItem("prev_val2");
+    }
+
+    function toggleDiv() {
+        let e = document.querySelector("#snippet");
+        if(e.style.display == 'block') {
+            e.style.display = 'none';
+        }
+        else {
+            e.style.display = 'block';
+        }
     }
 
 
     function pyGCD() {
-
         let func_gcd = `
         def greatest_common_divisor(a, b):
-            if isinstance(a, (int, float)) and isinstance(b, (int, float)): 
+            if isinstance(a, int) and isinstance(b, int): 
                 if a < b:
                     a, b = b, a
 
@@ -67,13 +99,12 @@ js: /assets/js/pyodide/pyodide.js
                 return b        
         `;
 
-
-        let val1 = document.querySelector("input[name='number1']").value;
-        let val2 = document.querySelector("input[name='number2']").value;
+        let val1 = document.querySelector("#number1").value;
+        let val2 = document.querySelector("#number2").value;
 
         // Store previous values for retrieval.
-        localStorage.setItem("prev_val1", val1);
-        localStorage.setItem("prev_val2", val2);
+        sessionStorage.setItem("prev_val1", val1);
+        sessionStorage.setItem("prev_val2", val2);
 
         let inputTest = `
         ${func_gcd}
@@ -86,16 +117,6 @@ js: /assets/js/pyodide/pyodide.js
 
         document.querySelector("#test-result").innerHTML = msg;
 
-        document.querySelector("#py-func-1-intro").innerHTML = `The function used to calculate these numbers is reprinted below:`;
-        document.querySelector("#py-func-1").innerHTML = `${func_gcd}`;
-        
-        // Clear previous responses.
-        clearInput();
-    }
-
-    clearInput = function() {
-        document.querySelector("input[name='number1']").value = "";
-        document.querySelector("input[name='number2']").value = "";
     }
 
 
