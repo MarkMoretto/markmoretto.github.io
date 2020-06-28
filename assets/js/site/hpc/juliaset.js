@@ -17,11 +17,13 @@ let v_zabs_max= 10;
 let v_nit_max = 1000;
 
 
-julia_set_variables = `
+julia_set_imports = `
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
+`;
 
+julia_set_variables = `
 # Image width and height; parameters for the plot
 im_width = ${v_im_width}
 im_height = ${v_im_height}
@@ -60,6 +62,7 @@ for ix in range(im_width):
 `;
 
 
+
 julia_set_visual = `
 fig, ax = plt.subplots()
 ax.imshow(julia, interpolation='nearest', cmap=cm.hot)
@@ -71,6 +74,17 @@ ytick_labels = np.linspace(ymin, ymax, yheight / 0.5)
 ax.set_yticks([(y-ymin) / yheight * im_height for y in ytick_labels])
 ax.set_yticklabels(['{:.1f}'.format(ytick) for ytick in ytick_labels])
 plt.show()
+`;
+
+
+julia_complete = `
+${julia_set_imports}
+
+${julia_set_variables}
+
+${julia_set_algo}
+
+${julia_set_visual}
 `;
 
 

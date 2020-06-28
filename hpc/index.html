@@ -1,7 +1,7 @@
 ---
-layout: pyodide
 title: Python HPC
 subtitle: High-Performance Computing Section
+layout: pyodide
 sections:
 - name: gcd
   title: GCD
@@ -44,7 +44,8 @@ sections:
 
 
     languagePluginLoader.then(() => {
-        console.log(pyodide.runPython('Python loaded!'));
-        // return pyodide.loadPackage(['numpy']);
-    });
+            let pycheck = `print("Hello! I'm loaded")`
+            console.log(pyodide.runPython(pycheck));
+            // return pyodide.loadPackage(['numpy']);
+        });
 </script>
