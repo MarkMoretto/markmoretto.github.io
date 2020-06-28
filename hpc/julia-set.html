@@ -1,10 +1,12 @@
-<div class="uk-section uk-section-small">
-    <div class="uk-container uk-container-small">
-        <p id="fractal-headline" class="uk-text-large"></p>
-    </div>
+
+
+<div class="uk-container uk-container-auto">
+    <p id="fractal-headline" class="uk-text-large"></p>
+</div>
+<div class="uk-container uk-container-auto">
+    <div id="julia-viz"></div>
 </div>
 
-<div id="julia-viz"></div>
 
 
 
@@ -63,8 +65,8 @@ def julia_set(*, mapping, min_coord, max_coord, width, height, n_iter = 256, thr
 let img_ratio = 16 / 9;
 let max_plt_w_res = 1920; // max plot width resolution
 let max_plt_h_res = 1080; // max plot height resolution
-let img_w = window.innerWidth;
-let img_h = Math.round(img_w / img_ratio);
+let img_w_low = Math.round(max_plt_w_res / 2);
+let img_h_low = Math.round(max_plt_h_res / 2);
 
 let julia_plot = `
 fig, ax = plt.subplots()
@@ -73,8 +75,8 @@ mapping = partial(douady_hubbard_polynomial, c=complex(-0.7, 0.27015j))
 
 image = julia_set(mapping=mapping, min_coord = complex(-1.5, -1), max_coord = complex(1.5, 1), 
                     n_iter = ${number_of_iterations},
-                    width = ${max_plt_w_res},
-                    height = ${max_plt_h_res})
+                    width = ${img_w_low},
+                    height = ${img_h_low})
 
 # plt.axis('off')
 ax.imshow(image, cmap='nipy_spectral', origin='lower')
@@ -104,31 +106,21 @@ ${julia_plot}
 `;
 
 
-let img_width = window.innerWidth / 2;
-let img_height = window.innerHeight / 2;
+let img_width = img_w_low + 10;
+let img_height = img_h_low + 10;
 
-window.onresize = function() {
-    img_width = this.innerWidth / 2;
-    img_height = this.innerHeight / 2;
-}
 
 // Current packages
-function evalAndLoad() {
-
-    let loadedPkgs = Object.keys(pyodide.loadedPackages);
-
-    if (loadedPkgs.includes("numpy") === false) {
-        languagePluginLoader.then(() => {
-            return pyodide.loadPackage(['numpy', 'matplotlib']);
-        });
-    }
-    
+let vizDiv = document.querySelector("#julia-viz");
+languagePluginLoader.then(() => {
+    return pyodide.loadPackage(['numpy', 'matplotlib']);
+}).then(() => {
     pyodide.runPython(julia_complete);
+}).then(() => {
     let img_data = pyodide.runPython(render_julia);
-    document.querySelector("#julia-viz").innerHTML = `<img src="data:image/png;base64,${img_data}" width="${img_width}" height="${img_height}">`;      
-}
+    vizDiv.innerHTML = `<img src="data:image/png;base64,${img_data}" width="${img_width}" height="${img_height}">`;   
+});
 
-evalAndLoad();
 
 
 </script>
