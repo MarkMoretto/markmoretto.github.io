@@ -40,12 +40,13 @@ sections:
 
 
 <script type="text/javascript">   
-
+    let requierd_packages = ['numpy', 'matplotlib'];
 
 
     languagePluginLoader.then(() => {
             let pycheck = `print("Hello! I'm loaded")`
             console.log(pyodide.runPython(pycheck));
+            return pyodide.loadPackage(requierd_packages);
             // return pyodide.loadPackage(['numpy']);
         });
 </script>

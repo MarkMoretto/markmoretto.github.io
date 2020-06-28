@@ -1,4 +1,8 @@
-
+<div class="uk-section uk-section-small">
+    <div class="uk-container uk-container-small">
+        <p id="fractal-headline" class="uk-text-large"></p>
+    </div>
+</div>
 
 <div id="julia-viz"></div>
 
@@ -6,103 +10,125 @@
 
 <script type="text/javascript">
 
-let v_im_width = 500;
-let v_im_height = 500;
-let v_zabs_max= 10;
-let v_nit_max = 1000;
-
-
 let julia_set_imports = `
+import base64
+from functools import partial
+from io import BytesIO
+
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
-import base64
-import io
-
-BytesIO = io.BytesIO
 `;
 
-let julia_set_variables = `
-# Image width and height; parameters for the plot
-im_width = ${v_im_width}
-im_height = ${v_im_height}
-
-c = complex(-0.1, 0.65)
-
-zabs_max = ${v_zabs_max}
-nit_max = ${v_nit_max}
-
-xmin = -1.5
-xmax = 1.5
-xwidth = xmax - xmin
-
-ymin = -1.5
-ymax = 1.5
-yheight = ymax - ymin
+let dhp_func = `
+def douady_hubbard_polynomial(z, *, c):
+    return z ** 2 + c
 `;
 
+// How many iterations to perform?
+let number_of_iterations = Math.round(2**8);
+let headline_msg = `Rendering a Julia set with ${number_of_iterations} iterations.`
+document.querySelector("#fractal-headline").innerHTML = headline_msg;
 
-let julia_set_algo = `
-julia = np.zeros((im_width, im_height))
-for ix in range(im_width):
-    for iy in range(im_height):
-        nit = 0
+let julia_func = `
+def julia_set(*, mapping, min_coord, max_coord, width, height, n_iter = 256, threshold = 2.):
 
-        # Map pixel position to a point in the complex plane
-        z = complex(ix / im_width * xwidth + xmin, iy / im_height * yheight + ymin)
+    im, re = np.ogrid[
+            min_coord.imag: max_coord.imag: height * 1j,
+            min_coord.real: max_coord.real: width * 1j,
+            ]
 
-        # Do the iterations
-        while abs(z) <= zabs_max and nit < nit_max:
-            z = z**2 + c
-            nit += 1
-        shade = 1-np.sqrt(nit / nit_max)
-        ratio = nit / nit_max
-        julia[ix,iy] = ratio
+    z = (re + 1j * im).flatten()
+
+    # Indices of unescaped pixels
+    live, = np.indices(z.shape)
+
+    iterations = np.empty_like(z, dtype=int)
+
+    for i in range(n_iter):
+
+        z_live = z[live] = mapping(z[live])
+
+        escaped = z_live.real**2 + z_live.imag**2 > threshold**2
+
+        iterations[live[escaped]] = i
+
+        live = live[~escaped]
+
+    iterations[live] = n_iter - 1
+
+    return (n_iter - iterations).reshape((height, width))
 `;
 
+let img_ratio = 16 / 9;
+let max_plt_w_res = 1920; // max plot width resolution
+let max_plt_h_res = 1080; // max plot height resolution
+let img_w = window.innerWidth;
+let img_h = Math.round(img_w / img_ratio);
 
-
-let julia_set_visual = `
+let julia_plot = `
 fig, ax = plt.subplots()
-ax.imshow(julia, interpolation='nearest', cmap=cm.hot)
-# Set the tick labels to the coordinates of z0 in the complex plane
-xtick_labels = np.linspace(xmin, xmax, xwidth / 0.5)
-ax.set_xticks([(x-xmin) / xwidth * im_width for x in xtick_labels])
-ax.set_xticklabels(['{:.1f}'.format(xtick) for xtick in xtick_labels])
-ytick_labels = np.linspace(ymin, ymax, yheight / 0.5)
-ax.set_yticks([(y-ymin) / yheight * im_height for y in ytick_labels])
-ax.set_yticklabels(['{:.1f}'.format(ytick) for ytick in ytick_labels])
+
+mapping = partial(douady_hubbard_polynomial, c=complex(-0.7, 0.27015j))
+
+image = julia_set(mapping=mapping, min_coord = complex(-1.5, -1), max_coord = complex(1.5, 1), 
+                    n_iter = ${number_of_iterations},
+                    width = ${max_plt_w_res},
+                    height = ${max_plt_h_res})
+
+# plt.axis('off')
+ax.imshow(image, cmap='nipy_spectral', origin='lower')
+# plt.imshow(image, cmap='nipy_spectral', origin='lower')
+
 plt.show()
 `;
+
 
 let render_julia = `
 btmp = BytesIO()
 fig.savefig(btmp, format='png')
-encoded = base64.b64encode(btmp.getvalue()).decode('utf8')
-encoded
-`
+
+# Return decoded data
+base64.b64encode(btmp.getvalue()).decode('utf8')
+`;
 
 
 let julia_complete = `
 ${julia_set_imports}
 
-${julia_set_variables}
+${dhp_func}
 
-${julia_set_algo}
+${julia_func}
 
-${julia_set_visual}
+${julia_plot}
 `;
 
 
+let img_width = window.innerWidth / 2;
+let img_height = window.innerHeight / 2;
 
-// Import libraries.
-languagePluginLoader.then(() => {
-    return pyodide.loadPackage(['numpy', 'matplotlib']);
-}).then(() => {
+window.onresize = function() {
+    img_width = this.innerWidth / 2;
+    img_height = this.innerHeight / 2;
+}
+
+// Current packages
+function evalAndLoad() {
+
+    let loadedPkgs = Object.keys(pyodide.loadedPackages);
+
+    if (loadedPkgs.includes("numpy") === false) {
+        languagePluginLoader.then(() => {
+            return pyodide.loadPackage(['numpy', 'matplotlib']);
+        });
+    }
+    
     pyodide.runPython(julia_complete);
-}).then(() => {
-    let encoded = pyodide.runPython(render_julia);
-    document.querySelector("#julia-viz").innerHTML = `<img src="data:image/png;base64,${encoded}">`;
-});
+    let img_data = pyodide.runPython(render_julia);
+    document.querySelector("#julia-viz").innerHTML = `<img src="data:image/png;base64,${img_data}" width="${img_width}" height="${img_height}">`;      
+}
+
+evalAndLoad();
+
 
 </script>
