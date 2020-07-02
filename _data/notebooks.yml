@@ -1,11 +1,8 @@
 groups:
   - idx: 0
     name: General
-    notebooks:
+    notebooks:     
       - idx: 0
-        name: LMT Application Analysis
-        link: /assets/notebooks/lmt-app-history.html      
-      - idx: 1
         name: Cheryl's Birthday Logic
         link: /assets/notebooks/cheryls-birthday-solution.html      
   - idx: 1

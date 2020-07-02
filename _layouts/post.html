@@ -9,12 +9,16 @@
                 {% include _navigation.html %}    
             </header>
             <main>
-                <article class="uk-article">
+                <article class="uk-article uk-margin-small-top uk-margin-medium-bottom">
                     <!-- This is where the title: in your front matter gets dropped in.-->
-                    <h1 class="uk-article-title">{{ page.title }}</h1>
+                    <h2 class="uk-article-title">{{ page.title }}</h2>
                     {% if page.author %}
-                        <p>by: {{ page.author }}</p>
-                    {% endif %}
+                        <p class="uk-article-meta">Written by: {{ page.author }}
+                        {% if page.date %}
+                            on {{ page.date | date: "%B %e, %Y" }}
+                        {% endif %}
+                        </p>
+                    {% endif %}           
                     <!-- This is where post content lives -->
                     {{ content }}
                     <!-- end of post content -->

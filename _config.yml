@@ -127,9 +127,9 @@ defaults:
 
 # Collection of posts and topics
 collections:
-  languages:
+  posts:
     output: true
-    permalink: /:collection/:path
+    permalink: /blog/:title
 
 
 # Folders to include in top-level search
