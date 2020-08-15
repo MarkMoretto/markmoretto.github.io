@@ -5,8 +5,8 @@
 
 
 node_modules/
-package.json
-Gemfile
+# package.json
+# Gemfile
 
 .DS_Store
 _site/
