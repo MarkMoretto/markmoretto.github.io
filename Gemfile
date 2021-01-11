@@ -20,7 +20,7 @@ group :jekyll_plugins do
     gem 'github-pages'
 
     # Markdown Syntax code highlighting
-    gem 'redcarpet', '~> 2.3'
+    gem 'redcarpet', '~> 3.5'
     gem 'albino', '~> 1.3'
     gem 'pygments.rb', '~> 1.2', '>= 1.2.1'
     gem "kramdown", ">= 2.3.0"
