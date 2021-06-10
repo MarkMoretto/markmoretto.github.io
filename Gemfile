@@ -53,5 +53,18 @@ group :jekyll_plugins do
     ### Jinja-like content blocks
     ### https://github.com/rustygeldmacher/jekyll-contentblocks
     gem 'jekyll-contentblocks'
+	
+	
+	# https://github.com/MarkMoretto/markmoretto.github.io/security/dependabot/Gemfile.lock/rexml/open
+	gem "rexml", ">= 3.2.5"
+	
+	# https://github.com/MarkMoretto/markmoretto.github.io/security/dependabot/Gemfile.lock/kramdown/open
+	gem "kramdown", ">= 2.3.1"
+	
+	# https://github.com/MarkMoretto/markmoretto.github.io/security/dependabot/Gemfile/redcarpet/open
+	gem "redcarpet", ">= 3.5.1"
+	
+	# https://github.com/MarkMoretto/markmoretto.github.io/security/dependabot/Gemfile.lock/nokogiri/open
+	gem "nokogiri", ">= 1.11.4"
 
 end
